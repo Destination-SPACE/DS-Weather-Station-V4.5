@@ -1,7 +1,7 @@
 <div align="center">
     <img src="docs/assets/Destination Space Logo.png" width="200" height="auto"/>
     <h1>Destination Weather Station v4.5.1</h1>
-    <p>An Open Source Remote Sensing Platform for National Taiwan Normal University</p>
+    <p>An Open Source Remote Sensing Platform for National Taiwan Normal University 🇹🇼</p>
 </div>
 
 ## 🌟 About the Project
@@ -25,7 +25,7 @@ This kit includes all the nessisary components to get started with the Destinati
 - 128x64px OLED display
 - 4x programable buttons
 - STEMMA QT expansion sensor port
-
+🇹🇼
 ## ⚙️ Hardware
 All hardware files can be found [here](hardware)
 ## 💻 Software
