@@ -1,3 +1,16 @@
+<style>
+  /* Adjust the margin or padding as needed */
+    ul {
+        margin-left: 20px; /* or padding-left: 0; */
+        display: inline-block; /* Ensures the link and bullet are aligned */
+    }
+
+    details {
+        margin-left: -20px; /* or padding-left: 0; */
+        display: inline-block; /* Ensures the link and bullet are aligned */
+  }
+</style>
+
 # Destination Weather Station v4.5 Documentation
 ![](assets/destinationWeatherStation_v4-5_iso.png)
 
@@ -6,6 +19,86 @@
 ### 💻 [Uploading Code](uploading-code.md)
 ### 🗃️ [Collecting Data](collecting-data.md)
 ### 🧪 [Experiments](experiments.md)
+
+<h3>
+<details>
+  <summary><a href="#-getting-started">🚀 Getting Started</a></summary>
+  <ul>
+    <li><a href="#-whats-included">📝 What's Included</a></li>
+    <details>
+        <summary><a href=#-getting-started>🔧 Soldering</a></summary>
+        <ul>
+        <li><a href="#step-1">Step 1</a></li>
+        <li><a href="#step-2">Step 2</a></li>
+        <li><a href="#step-3">Step 3</a></li>
+        <li><a href="#step-4">Step 4</a></li>
+        <li><a href="#step-5">Step 5</a></li>
+        </ul>
+    </details>
+    <li><a href="#final-assembly">Final Assembly</a></li>
+  </ul>
+</details>
+</h3>
+
+<h3>
+<details>
+  <summary><a href="uploading-code.md">💻 Uploading Code</a></summary>
+  <ul>
+    <li><a href="">Domain 1</a></li>
+    <details>
+        <summary><a href=>Sub-Domain List 1</a></summary>
+        <ul>
+        <li><a href="">Sub-Domain 1</a></li>
+        <li><a href="">Sub-Domain 2</a></li>
+        <li><a href="">Sub-Domain 3</a></li>
+        <li><a href="">Sub-Domain 4</a></li>
+        <li><a href="">Sub-Domain 5</a></li>
+        </ul>
+    </details>
+    <li><a href="">Domain 2</a></li>
+  </ul>
+</details>
+</h3>
+
+<h3>
+<details>
+  <summary><a href="collecting-data.md">🗃️ Collecting Data</a></summary>
+  <ul>
+    <li><a href="">Domain 1</a></li>
+    <details>
+        <summary><a href=>Sub-Domain List 1</a></summary>
+        <ul>
+        <li><a href="">Sub-Domain 1</a></li>
+        <li><a href="">Sub-Domain 2</a></li>
+        <li><a href="">Sub-Domain 3</a></li>
+        <li><a href="">Sub-Domain 4</a></li>
+        <li><a href="">Sub-Domain 5</a></li>
+        </ul>
+    </details>
+    <li><a href="">Domain 2</a></li>
+  </ul>
+</details>
+</h3>
+
+<h3>
+<details>
+  <summary><a href="collecting-data.md">🧪 Experiments</a></summary>
+  <ul>
+    <li><a href="">Domain 1</a></li>
+    <details>
+        <summary><a href=>Sub-Domain List 1</a></summary>
+        <ul>
+        <li><a href="">Sub-Domain 1</a></li>
+        <li><a href="">Sub-Domain 2</a></li>
+        <li><a href="">Sub-Domain 3</a></li>
+        <li><a href="">Sub-Domain 4</a></li>
+        <li><a href="">Sub-Domain 5</a></li>
+        </ul>
+    </details>
+    <li><a href="">Domain 2</a></li>
+  </ul>
+</details>
+</h3>
 
 ## 🚀 Getting Started
 
@@ -20,7 +113,7 @@
 - 1x 8GB microSD card
 - 1x microSD to USB A adapter
 
-### 🔧🔨 Soldering
+### 🔧 Soldering
 
 #### Step 1:
 - Take 2 1x7 male header pins and insert the long side of the pins into the board
