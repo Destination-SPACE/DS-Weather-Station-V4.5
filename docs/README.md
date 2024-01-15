@@ -47,3 +47,4 @@
 ### Final Assembly
 - Insert the AAA batteries into the battery case
 - Insert the microSD card into the weather station
+- Write your name on the back of the weather station in the white box provided
