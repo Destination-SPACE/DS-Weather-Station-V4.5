@@ -4,6 +4,7 @@ The following instructions are for how to install Arduino IDE and configure it f
 ## Directory
 [//]: # (Directory Links)
 <h3>
+    <ul>
     <li><a href="#💾-downloading-arduino-ide">💾 Downloading Arduino IDE</a></li>
     <details>
         <summary><a href="#💻-configuring-arduino-ide">💻 Configuring Arduino IDE</a></summary>
@@ -13,6 +14,7 @@ The following instructions are for how to install Arduino IDE and configure it f
         </ul>
     </details>
     <li><a href="#👾-example-programs">👾 Example Programs</a></li>
+    </ul>
 </h3>
 
 ## 💾 Downloading Arduino IDE
@@ -70,7 +72,7 @@ The following example programs are provided for the weather station. Bellow is t
     }
 
     details {
-        margin-left: 0px; /* or padding-left: 0; */
+        margin-left: -20px; /* or padding-left: 0; */
         display: inline-block; /* Ensures the link and bullet are aligned */
     }
 </style>
