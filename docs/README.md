@@ -1,5 +1,9 @@
 <style>
-  /* Adjust the margin or padding as needed */
+    /* Adjust the margin or padding as needed */
+    div {
+        margin-left: 20px; /* or padding-left: 0; */
+
+    }
     ul {
         margin-left: 20px; /* or padding-left: 0; */
         display: inline-block; /* Ensures the link and bullet are aligned */
@@ -8,17 +12,15 @@
     details {
         margin-left: -20px; /* or padding-left: 0; */
         display: inline-block; /* Ensures the link and bullet are aligned */
-  }
+    }
 </style>
 
 # Destination Weather Station v4.5 Documentation
 ![](assets/destinationWeatherStation_v4-5_iso.png)
 
 ## Directory
-### 🚀 [Getting Started](#🚀-getting-started) //add subdirectories here like in [here](https://raw.githubusercontent.com/inventree/InvenTree/master/README.md)
-### 💻 [Uploading Code](uploading-code.md)
-### 🗃️ [Collecting Data](collecting-data.md)
-### 🧪 [Experiments](experiments.md)
+[//]: # (Directory Links)
+<div>
 
 <h3>
 <details>
@@ -99,6 +101,8 @@
   </ul>
 </details>
 </h3>
+
+</div>
 
 ## 🚀 Getting Started
 
