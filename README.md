@@ -25,8 +25,9 @@ This kit includes all the nessisary components to get started with the Destinati
 - 128x64px OLED display
 - 4x programable buttons
 - STEMMA QT expansion sensor port
-🇹🇼
 ## ⚙️ Hardware
 All hardware files can be found [here](hardware)
 ## 💻 Software
 All program files can be found [here](software)
+## 🗂️ Documentation
+Documentation for the weather station can be found [here](docs)
