@@ -6,6 +6,6 @@ View files with KiCanvas: [coming soon!](https://kicanvas.org/home/)
 
 ## Directory
 ### 🧾 [Bill of Materials](bom/bom.md)
-### 📄 [Datasheets](/datasheets)
+### 📄 [Datasheets](datasheets)
 ### 📐 [Gerbers](gerber)
 ### 📰 [Schematics](pdf)
