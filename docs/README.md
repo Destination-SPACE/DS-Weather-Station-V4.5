@@ -1,4 +1,19 @@
 # Destination Weather Station v4.5 Documentation
+<style>
+    div {
+        margin-left: 20px;
+
+    }
+    ul {
+        margin-left: 20px;
+        display: inline-block;
+    }
+
+    details {
+        margin-left: -20px;
+        display: inline-block;
+    }
+</style>
 ![](assets/destinationWeatherStation_v4-5_iso.png)
 
 ## Directory
@@ -131,19 +146,3 @@
 - Insert the AAA batteries into the battery case
 - Insert the microSD card into the weather station
 - Write your name on the back of the weather station in the white box provided
-
-<style>
-    div {
-        margin-left: 20px;
-
-    }
-    ul {
-        margin-left: 20px;
-        display: inline-block;
-    }
-
-    details {
-        margin-left: -20px;
-        display: inline-block;
-    }
-</style>
