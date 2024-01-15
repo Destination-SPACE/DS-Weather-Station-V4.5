@@ -1,6 +1,12 @@
 # Destination Weather Station v4.5 Documentation
 ![](assets/destinationWeatherStation_v4-5_iso.png)
 
+## Directory
+### 🚀 [Getting Started](#🚀-getting-started) //add subdirectories here like in [here](https://raw.githubusercontent.com/inventree/InvenTree/master/README.md)
+### 💻 [Uploading Code](uploading-code.md)
+### 🗃️ [Collecting Data](collecting-data.md)
+### 🧪 [Experiments](experiments.md)
+
 ## 🚀 Getting Started
 
 ### 📝 What's Included
