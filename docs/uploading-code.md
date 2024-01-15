@@ -79,7 +79,7 @@ The following example programs are provided for the weather station. Bellow is t
     }
 
     details {
-        margin-left: -15px; /* or padding-left: 0; */
+        margin-left: -20px; /* or padding-left: 0; */
         display: inline-block; /* Ensures the link and bullet are aligned */
     }
 </style>
