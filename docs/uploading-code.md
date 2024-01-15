@@ -6,7 +6,7 @@ The following instructions are for how to install Arduino IDE and configure it f
 <h3>
     <li><a href="#💾-downloading-arduino-ide">💾 Downloading Arduino IDE</a></li>
     <details>
-        <summary><a href="#💻-configuring-arduino-ide">&nbsp&nbsp💻 Configuring Arduino IDE</a></summary>
+        <summary><a href="#💻-configuring-arduino-ide">💻 Configuring Arduino IDE</a></summary>
         <ul>
             <li><a href="#📥-installing-board-manager">📥 Installing Board Manager</a></li>
             <li><a href="#📥-installing-code-libraries">📥 Installing Code Libraries</a></li>

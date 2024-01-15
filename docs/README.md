@@ -11,7 +11,7 @@
   <ul>
     <li><a href="#-whats-included">📝 What's Included</a></li>
     <details>
-        <summary><a href=#-getting-started>&nbsp🔧 Soldering</a></summary>
+        <summary><a href=#-getting-started>🔧 Soldering</a></summary>
         <ul>
         <li><a href="#step-1">Step 1</a></li>
         <li><a href="#step-2">Step 2</a></li>
@@ -31,7 +31,7 @@
   <ul>
     <li><a href="uploading-code.md#💾-downloading-arduino-ide">💾 Downloading Arduino IDE</a></li>
     <details>
-        <summary><a href="uploading-code.md#💻-configuring-arduino-ide">&nbsp💻 Configuring Arduino IDE</a></summary>
+        <summary><a href="uploading-code.md#💻-configuring-arduino-ide">💻 Configuring Arduino IDE</a></summary>
         <ul>
         <li><a href="uploading-code.md#📥-installing-board-manager">📥 Installing Board Manager</a></li>
         <li><a href="uploading-code.md#📥-installing-code-libraries">📥 Installing Code Libraries</a></li>
