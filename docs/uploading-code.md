@@ -68,18 +68,17 @@ The following example programs are provided for the weather station. Bellow is t
 - [Weather_Station](): Full version of the weather station code
 
 <style>
-    /* Adjust the margin or padding as needed */
     div {
-        margin-left: -20px; /* or padding-left: 0; */
+        margin-left: -20px;
 
     }
     ul {
-        margin-left: 20px; /* or padding-left: 0; */
-        display: inline-block; /* Ensures the link and bullet are aligned */
+        margin-left: 20px;
+        display: inline-block;
     }
 
     details {
-        margin-left: -20px; /* or padding-left: 0; */
-        display: inline-block; /* Ensures the link and bullet are aligned */
+        margin-left: -20px;
+        display: inline-block;
     }
 </style>

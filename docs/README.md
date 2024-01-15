@@ -133,18 +133,17 @@
 - Write your name on the back of the weather station in the white box provided
 
 <style>
-    /* Adjust the margin or padding as needed */
     div {
-        margin-left: 20px; /* or padding-left: 0; */
+        margin-left: 20px;
 
     }
     ul {
-        margin-left: 20px; /* or padding-left: 0; */
-        display: inline-block; /* Ensures the link and bullet are aligned */
+        margin-left: 20px;
+        display: inline-block;
     }
 
     details {
-        margin-left: -20px; /* or padding-left: 0; */
-        display: inline-block; /* Ensures the link and bullet are aligned */
+        margin-left: -20px;
+        display: inline-block;
     }
 </style>
