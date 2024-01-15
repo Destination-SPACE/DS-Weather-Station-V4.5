@@ -3,8 +3,9 @@ The following instructions are for how to install Arduino IDE and configure it f
 
 ## Directory
 [//]: # (Directory Links)
+<div>
 <h3>
-    <ul>
+<ul>
     <li><a href="#💾-downloading-arduino-ide">💾 Downloading Arduino IDE</a></li>
     <details>
         <summary><a href="#💻-configuring-arduino-ide">💻 Configuring Arduino IDE</a></summary>
@@ -14,8 +15,9 @@ The following instructions are for how to install Arduino IDE and configure it f
         </ul>
     </details>
     <li><a href="#👾-example-programs">👾 Example Programs</a></li>
-    </ul>
+</ul>
 </h3>
+</div>
 
 ## 💾 Downloading Arduino IDE
 Go to https://www.arduino.cc/en/software/. To download the latest version of Arduino IDE, click ```Windows Win 10 and newer, 64 bits``` under ```DOWNLOAD OPTIONS```.
@@ -66,6 +68,11 @@ The following example programs are provided for the weather station. Bellow is t
 - [Weather_Station](): Full version of the weather station code
 
 <style>
+    /* Adjust the margin or padding as needed */
+    div {
+        margin-left: 20px; /* or padding-left: 0; */
+
+    }
     ul {
         margin-left: 20px; /* or padding-left: 0; */
         display: inline-block; /* Ensures the link and bullet are aligned */
