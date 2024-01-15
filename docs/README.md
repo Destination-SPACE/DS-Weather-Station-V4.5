@@ -1,20 +1,3 @@
-<style>
-    /* Adjust the margin or padding as needed */
-    div {
-        margin-left: 20px; /* or padding-left: 0; */
-
-    }
-    ul {
-        margin-left: 20px; /* or padding-left: 0; */
-        display: inline-block; /* Ensures the link and bullet are aligned */
-    }
-
-    details {
-        margin-left: -20px; /* or padding-left: 0; */
-        display: inline-block; /* Ensures the link and bullet are aligned */
-    }
-</style>
-
 # Destination Weather Station v4.5 Documentation
 ![](assets/destinationWeatherStation_v4-5_iso.png)
 
@@ -28,7 +11,7 @@
   <ul>
     <li><a href="#-whats-included">📝 What's Included</a></li>
     <details>
-        <summary><a href=#-getting-started>🔧 Soldering</a></summary>
+        <summary><a href=#-getting-started>&nbsp🔧 Soldering</a></summary>
         <ul>
         <li><a href="#step-1">Step 1</a></li>
         <li><a href="#step-2">Step 2</a></li>
@@ -46,18 +29,15 @@
 <details>
   <summary><a href="uploading-code.md">💻 Uploading Code</a></summary>
   <ul>
-    <li><a href="">Domain 1</a></li>
+    <li><a href="uploading-code.md#💾-downloading-arduino-ide">💾 Downloading Arduino IDE</a></li>
     <details>
-        <summary><a href=>Sub-Domain List 1</a></summary>
+        <summary><a href="uploading-code.md#💻-configuring-arduino-ide">&nbsp💻 Configuring Arduino IDE</a></summary>
         <ul>
-        <li><a href="">Sub-Domain 1</a></li>
-        <li><a href="">Sub-Domain 2</a></li>
-        <li><a href="">Sub-Domain 3</a></li>
-        <li><a href="">Sub-Domain 4</a></li>
-        <li><a href="">Sub-Domain 5</a></li>
+        <li><a href="uploading-code.md#📥-installing-board-manager">📥 Installing Board Manager</a></li>
+        <li><a href="uploading-code.md#📥-installing-code-libraries">📥 Installing Code Libraries</a></li>
         </ul>
     </details>
-    <li><a href="">Domain 2</a></li>
+    <li><a href="uploading-code.md#👾-example-programs">👾 Example Programs</a></li>
   </ul>
 </details>
 </h3>
@@ -151,3 +131,20 @@
 - Insert the AAA batteries into the battery case
 - Insert the microSD card into the weather station
 - Write your name on the back of the weather station in the white box provided
+
+<style>
+    /* Adjust the margin or padding as needed */
+    div {
+        margin-left: 20px; /* or padding-left: 0; */
+
+    }
+    ul {
+        margin-left: 20px; /* or padding-left: 0; */
+        display: inline-block; /* Ensures the link and bullet are aligned */
+    }
+
+    details {
+        margin-left: -20px; /* or padding-left: 0; */
+        display: inline-block; /* Ensures the link and bullet are aligned */
+    }
+</style>
