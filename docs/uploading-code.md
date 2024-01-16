@@ -1,19 +1,4 @@
 # Uploading Code
-<style>
-    div {
-        margin-left: -20px;
-
-    }
-    ul {
-        margin-left: 20px;
-        display: inline-block;
-    }
-
-    details {
-        margin-left: -20px;
-        display: inline-block;
-    }
-</style>
 The following instructions are for how to install Arduino IDE and configure it for the Destination Weather Station v4.5.
 
 ## Directory

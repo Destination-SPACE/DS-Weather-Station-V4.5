@@ -8,7 +8,7 @@
   <summary><a href="#-getting-started">🚀 Getting Started</a></summary>
   <ul>
     <li><a href="#-whats-included">📝 What's Included</a></li>
-    <details style="margin-left: 50px">
+    <details>
         <summary><a href=#-getting-started>🔧 Soldering</a></summary>
         <ul>
         <li><a href="#step-1">Step 1</a></li>
@@ -28,7 +28,7 @@
   <summary><a href="uploading-code.md">💻 Uploading Code</a></summary>
   <ul>
     <li><a href="uploading-code.md#💾-downloading-arduino-ide">💾 Downloading Arduino IDE</a></li>
-    <details style="margin-left: -15px">
+    <details>
         <summary><a href="uploading-code.md#💻-configuring-arduino-ide">💻 Configuring Arduino IDE</a></summary>
         <ul>
         <li><a href="uploading-code.md#📥-installing-board-manager">📥 Installing Board Manager</a></li>
@@ -45,7 +45,7 @@
   <summary><a href="collecting-data.md">🗃️ Collecting Data</a></summary>
   <ul>
     <li><a href="">Domain 1</a></li>
-    <details style="margin-left: -15px">
+    <details>
         <summary><a href=>Sub-Domain List 1</a></summary>
         <ul>
         <li><a href="">Sub-Domain 1</a></li>
@@ -65,7 +65,7 @@
   <summary><a href="collecting-data.md">🧪 Experiments</a></summary>
   <ul>
     <li><a href="">Domain 1</a></li>
-    <details style="margin-left: -15px">
+    <details>
         <summary><a href=>Sub-Domain List 1</a></summary>
         <ul>
         <li><a href="">Sub-Domain 1</a></li>
