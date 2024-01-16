@@ -1,23 +1,5 @@
-<html>
-<style>
-    div {
-        margin-left: 20px;
-    }
-    ul {
-        margin-left: 20px;
-        display: inline-block;
-    }
-
-    details {
-        margin-left: -20px;
-        display: inline-block;
-    }
-</style>
-![](assets/destinationWeatherStation_v4-5_iso.png)
-</html>
-
 # Destination Weather Station v4.5 Documentation
-
+![](assets/destinationWeatherStation_v4-5_iso.png)
 ## Directory
 [//]: # (Directory Links)
 <div>

@@ -1,0 +1,12 @@
+div {
+    margin-left: 20px;
+}
+ul {
+    margin-left: 20px;
+    display: inline-block;
+}
+
+details {
+    margin-left: -20px;
+    display: inline-block;
+}
