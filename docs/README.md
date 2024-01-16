@@ -1,9 +1,25 @@
+---
+<style>
+  div {
+      margin-left: 20px;
+  }
+  ul {
+      margin-left: 20px;
+      display: inline-block;
+  }
+
+  details {
+      margin-left: -30px;
+      display: inline-block;
+  }
+</style>
+---
+
 # Destination Weather Station v4.5 Documentation
 ![](assets/destinationWeatherStation_v4-5_iso.png)
 ## Directory
 [//]: # (Directory Links)
 <div>
-
 <h3>
 <details>
   <summary><a href="#-getting-started">🚀 Getting Started</a></summary>
@@ -80,7 +96,6 @@
   </ul>
 </details>
 </h3>
-
 </div>
 
 ## 🚀 Getting Started
