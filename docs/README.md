@@ -8,7 +8,7 @@
   <summary><a href="#-getting-started">🚀 Getting Started</a></summary>
   <ul>
     <li><a href="#-whats-included">📝 What's Included</a></li>
-    <details style="margin-left: 10px">
+    <details style="margin-left: 50px">
         <summary><a href=#-getting-started>🔧 Soldering</a></summary>
         <ul>
         <li><a href="#step-1">Step 1</a></li>
