@@ -1,8 +1,8 @@
 # Destination Weather Station v4.5 Documentation
+<html>
 <style>
     div {
         margin-left: 20px;
-
     }
     ul {
         margin-left: 20px;
@@ -15,6 +15,7 @@
     }
 </style>
 ![](assets/destinationWeatherStation_v4-5_iso.png)
+</html>
 
 ## Directory
 [//]: # (Directory Links)
