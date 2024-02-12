@@ -56,7 +56,22 @@
           "width": 0.0
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "silk_overlap|135820000|116195000|a9bb0eb2-fbd3-4657-bc81-79e234b5d42c|2f881e99-4911-4678-8f56-0db0c5084234",
+        "silk_overlap|135820000|116195000|a9bb0eb2-fbd3-4657-bc81-79e234b5d42c|8be3f73f-8def-4a86-99d6-da7569fd3103",
+        "silk_overlap|135820000|117485000|a9bb0eb2-fbd3-4657-bc81-79e234b5d42c|d4253d6a-c730-4b3c-8164-00603d789e26",
+        "silk_overlap|137613000|116195000|4f16d53d-72ef-4f37-af88-68711bc20653|8985d991-b41e-42ae-b48e-54a5e843613f",
+        "silk_overlap|137613000|117485000|c588b59a-1baf-4bf1-a05e-8d41372fa8b2|bfe7a686-6c0d-4e66-955c-f28cd5c9690f",
+        "silk_overlap|138500000|117485000|c588b59a-1baf-4bf1-a05e-8d41372fa8b2|32e66b3a-b6be-4936-9bff-cb394f310771",
+        "silk_overlap|138510000|116195000|4f16d53d-72ef-4f37-af88-68711bc20653|d3c0e086-ea30-4521-9d72-ad5cfdf2b282",
+        "silk_overlap|138510000|116195000|89d9670d-4350-408f-a8b9-b4ff1bf7e9a0|8985d991-b41e-42ae-b48e-54a5e843613f",
+        "silk_overlap|138510000|116195000|89d9670d-4350-408f-a8b9-b4ff1bf7e9a0|d3c0e086-ea30-4521-9d72-ad5cfdf2b282",
+        "silk_overlap|138510000|117485000|89d9670d-4350-408f-a8b9-b4ff1bf7e9a0|32e66b3a-b6be-4936-9bff-cb394f310771",
+        "silk_overlap|138510000|117485000|89d9670d-4350-408f-a8b9-b4ff1bf7e9a0|bfe7a686-6c0d-4e66-955c-f28cd5c9690f",
+        "silk_overlap|141034113|89948626|e40bfed6-41b7-4c3b-86f5-c2cb4c0fc196|37007685-3571-4e8f-9243-dcaef8b567bc",
+        "text_thickness|133350000|120650000|6a6ab4c6-f6c6-461d-8735-a5cca2dacd32|00000000-0000-0000-0000-000000000000",
+        "text_thickness|139446000|105410000|d70c824b-7a9c-4eec-ae7f-2cd796a14848|00000000-0000-0000-0000-000000000000"
+      ],
       "meta": {
         "version": 2
       },
@@ -414,7 +429,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "ignore",
