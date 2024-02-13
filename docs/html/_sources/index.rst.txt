@@ -25,7 +25,7 @@ Contents
    about-the-project
 
 .. toctree::
-   :caption: 🚀 Getting Started
+   :caption: Getting Started
    :maxdepth: 1
 
    hardware/the-kit
