@@ -3,15 +3,15 @@
     "GenerationSoftware": {
       "Vendor": "KiCad",
       "Application": "Pcbnew",
-      "Version": "7.0.8"
+      "Version": "7.0.10"
     },
-    "CreationDate": "2024-01-07T13:33:52-05:00"
+    "CreationDate": "2024-02-16T08:22:26-05:00"
   },
   "GeneralSpecs": {
     "ProjectId": {
       "Name": "destinationWeatherStation_r4-5",
       "GUID": "64657374-696e-4617-9469-6f6e57656174",
-      "Revision": "02"
+      "Revision": "03"
     },
     "Size": {
       "X": 63.6,
@@ -69,8 +69,28 @@
       "FilePolarity": "Negative"
     },
     {
+      "Path": "destinationWeatherStation_r4-5-User_Drawings.gbr",
+      "FileFunction": "Other,User",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "destinationWeatherStation_r4-5-User_Comments.gbr",
+      "FileFunction": "Other,User",
+      "FilePolarity": "Positive"
+    },
+    {
       "Path": "destinationWeatherStation_r4-5-Edge_Cuts.gbr",
       "FileFunction": "Profile",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "destinationWeatherStation_r4-5-F_Fab.gbr",
+      "FileFunction": "AssemblyDrawing,Top",
+      "FilePolarity": "Positive"
+    },
+    {
+      "Path": "destinationWeatherStation_r4-5-B_Fab.gbr",
+      "FileFunction": "AssemblyDrawing,Bot",
       "FilePolarity": "Positive"
     }
   ],

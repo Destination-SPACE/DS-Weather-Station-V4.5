@@ -6,6 +6,7 @@
 | 1 | 1 | C1 | 10uF | [AVX-CX5R-KGM](../datasheets/AVX-CX5R-KGM-MLCC.pdf) | KYOCERA AVX | KGM15CR51A106MT | 0603 |
 | 2 | 3 | C2, C3, C4 | 0.1uF | [AVX-CX5R-KGM](../datasheets/AVX-CX5R-KGM-MLCC.pdf) | KYOCERA AVX | KGM15AR51H104KT | 0603 | 
 | 3 | 10 | R1, R2, R3, R4, R5, R6, R7, R8, R9, R10 | 10K | [D/CRCW e3](../datasheets/Vishay-Dale-DCRCWe3.pdf) | Vishay Dale | CRCW060310K0JNEB | 0603 |
+| 3 | 10 | R11, R12 | 0R | [D/CRCW e3](../datasheets/Vishay-Dale-DCRCWe3.pdf) | Vishay Dale | CRCW06030000Z0EA | 0603 |
 | 4 | 2 | Q1, Q2 | IRLML6244TRPBF | [IRLML6244TRPBF](../datasheets//Infineon-IRLML6244.pdf) | Infineon Technologies | IRLML6244TRPBF | SOT-23 |
 | 5 | 2 | Q3, Q4 | DMP2035UVTQ | [DMP2035UVTQ](../datasheets/Diodes-Incorporated-DMP2035UVTQ.pdf) | Diodes Incorporated | DMP2035UVTQ-7 | TSOT26 |
 | 6 | 1 | U1 | XIAO RP2040 | [XIAO RP2040](https://wiki.seeedstudio.com/XIAO-RP2040/) | Seeed Studio | XIAO RP2040 | N/A |
