@@ -30,4 +30,4 @@ All hardware files can be found [here](hardware)
 ## 💻 Software
 All program files can be found [here](software)
 ## 🗂️ Documentation
-Documentation for the weather station can be found [here](docs)
+Documentation for the weather station can be found [here](https://destination-space.gitlab.io/ds-weather-station-v4.5/)
