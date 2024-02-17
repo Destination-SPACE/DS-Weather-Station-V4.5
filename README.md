@@ -15,6 +15,6 @@ Documentation for the weather station can be found [here](https://destination-sp
 ## Licenses
 Each of the above sections are individually licensed. Terms and conditions apply within their respective folders.
 
-**Documentation - [Apache License 2.0](docs/LICENSE)**<br>
-**Hardware - [CERN-OHL-P](hardware/LICENSE)**<br>
+**Documentation - [Apache License 2.0](docs/LICENSE)** <br>
+**Hardware - [CERN-OHL-P](hardware/LICENSE)** <br>
 **Software - [The MIT License](software/LICENSE)**
