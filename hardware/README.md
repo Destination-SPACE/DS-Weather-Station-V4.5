@@ -9,3 +9,5 @@ View schematic and PCB files with [KiCanvas](https://kicanvas.org/?github=https%
 ### 📄 [Datasheets](datasheets)
 ### 📐 [Gerbers](gerber)
 ### 📰 [Schematics](pdf)
+
+Licensed under [CERN-OHL-P](LICENSE)
