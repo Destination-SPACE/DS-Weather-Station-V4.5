@@ -3953,7 +3953,7 @@
     (property "Manufacturer" "KYOCERA AVX" (at 152.4 22.225 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (property "mpn" "KGM15CR51A106MT" (at 152.4 22.225 0)
+    (property "mpn" "KGM15CR51A106KT" (at 152.4 22.225 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Tolerance" "20%" (at 154.305 25.4 0) (do_not_autoplace)
