@@ -1,0 +1,1112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>D:\Destination-SPACE-Files\development\docs\ds-weather-station-v4.5\hardware\destinationWeatherStation_r4-5.kicad_sch</source>
+    <date>2/23/2024 9:22:25 PM</date>
+    <tool>Eeschema 7.0.11</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title>Destination Weather Station v4.5.2</title>
+        <company/>
+        <rev>03</rev>
+        <date>2024-02-23</date>
+        <source>destinationWeatherStation_r4-5.kicad_sch</source>
+        <comment number="1" value="Madison Gleydura"/>
+        <comment number="2" value="FINAL VERSION"/>
+        <comment number="3" value="2024"/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>10uF</value>
+      <footprint>lib_fp:CAPC160X80X88L35N</footprint>
+      <datasheet>datasheets/AVX-CX5R-KGM-MLCC.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">KYOCERA AVX</field>
+        <field name="Package">0603</field>
+        <field name="Tolerance">20%</field>
+        <field name="Voltage Rating">10V</field>
+        <field name="mpn">KGM15CR51A106MT</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="c_small" description="Ceramic capacitor symbol"/>
+      <property name="Manufacturer" value="KYOCERA AVX"/>
+      <property name="mpn" value="KGM15CR51A106MT"/>
+      <property name="Tolerance" value="20%"/>
+      <property name="Voltage Rating" value="10V"/>
+      <property name="Package" value="0603"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <property name="ki_description" value="Ceramic capacitor symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ba990a0a-8d8c-431e-835d-c6f9e1796d3f</tstamps>
+    </comp>
+    <comp ref="C2">
+      <value>100nF</value>
+      <footprint>lib_fp:CAPC160X80X88L35N</footprint>
+      <datasheet>datasheets/AVX-CX5R-KGM-MLCC.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">KYOCERA AVX</field>
+        <field name="Package">0603</field>
+        <field name="Tolerance">10%</field>
+        <field name="Voltage Rating">50V</field>
+        <field name="mpn">KGM15AR51H104KT</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="c_small" description="Ceramic capacitor symbol"/>
+      <property name="Manufacturer" value="KYOCERA AVX"/>
+      <property name="mpn" value="KGM15AR51H104KT"/>
+      <property name="Tolerance" value="10%"/>
+      <property name="Voltage Rating" value="50V"/>
+      <property name="Package" value="0603"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <property name="ki_description" value="Ceramic capacitor symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>455b6905-854c-445b-852b-3eb631cc8c49</tstamps>
+    </comp>
+    <comp ref="C3">
+      <value>100nF</value>
+      <footprint>lib_fp:CAPC160X80X88L35N</footprint>
+      <datasheet>datasheets/AVX-CX5R-KGM-MLCC.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">KYOCERA AVX</field>
+        <field name="Package">0603</field>
+        <field name="Tolerance">10%</field>
+        <field name="Voltage Rating">50V</field>
+        <field name="mpn">KGM15AR51H104KT</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="c_small" description="Ceramic capacitor symbol"/>
+      <property name="Manufacturer" value="KYOCERA AVX"/>
+      <property name="mpn" value="KGM15AR51H104KT"/>
+      <property name="Tolerance" value="10%"/>
+      <property name="Voltage Rating" value="50V"/>
+      <property name="Package" value="0603"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <property name="ki_description" value="Ceramic capacitor symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8bb28f7a-ebc4-4cff-a6ca-eba9be5259bd</tstamps>
+    </comp>
+    <comp ref="C4">
+      <value>100nF</value>
+      <footprint>lib_fp:CAPC160X80X88L35N</footprint>
+      <datasheet>datasheets/AVX-CX5R-KGM-MLCC.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">KYOCERA AVX</field>
+        <field name="Package">0603</field>
+        <field name="Tolerance">10%</field>
+        <field name="Voltage Rating">50V</field>
+        <field name="mpn">KGM15AR51H104KT</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="c_small" description="Ceramic capacitor symbol"/>
+      <property name="Manufacturer" value="KYOCERA AVX"/>
+      <property name="mpn" value="KGM15AR51H104KT"/>
+      <property name="Tolerance" value="10%"/>
+      <property name="Voltage Rating" value="50V"/>
+      <property name="Package" value="0603"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <property name="ki_description" value="Ceramic capacitor symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fd95866f-1305-4840-b1ad-4a373b8af714</tstamps>
+    </comp>
+    <comp ref="J1">
+      <value>S2B-PH-SM4</value>
+      <footprint>lib_fp:JST-PH-S2B-SM4-TB</footprint>
+      <datasheet>datasheets/JST-PH-Connectors.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">JST Sales America Inc.</field>
+        <field name="mpn">S2B-PH-SM4-TB(LF)(SN)</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="Conn_01x02_Female" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="JST Sales America Inc."/>
+      <property name="mpn" value="S2B-PH-SM4-TB(LF)(SN)"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0273485c-e92f-4c62-a922-9b89c93d8e49</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>MEM2061</value>
+      <footprint>lib_fp:MEM2061</footprint>
+      <datasheet>datasheets/GCT-MEM2061.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">GCT</field>
+        <field name="mpn">MEM2061-01-188-00-A</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="Micro_SD_Card_Det1" description="Micro SD Card Socket with one card detection pin"/>
+      <property name="Manufacturer" value="GCT"/>
+      <property name="mpn" value="MEM2061-01-188-00-A"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <property name="ki_description" value="Micro SD Card Socket with one card detection pin"/>
+      <property name="ki_keywords" value="connector SD microsd"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b800aee4-ba43-48ca-b124-9ffb9c926535</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>STEMMA_QT</value>
+      <footprint>lib_fp:JST_SH_SM04B-SRSS-TB</footprint>
+      <datasheet>datasheets/JST-SH-Connectors.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">JST Sales America Inc.</field>
+        <field name="mpn">SM04B-SRSS-TB</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="Conn_01x04_Female" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Manufacturer" value="JST Sales America Inc."/>
+      <property name="mpn" value="SM04B-SRSS-TB"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d03d8dd9-edf2-4d90-a409-2c3ac2e8dea0</tstamps>
+    </comp>
+    <comp ref="Q1">
+      <value>IRLML6244TRPBF</value>
+      <footprint>lib_fp:IRLML6244TRPBF</footprint>
+      <datasheet>datasheets/Infineon-IRLML6244.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Infineon Technologies</field>
+        <field name="mpn">IRLML6244TRPBF</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="NMOS_GSD" description="N-Channel MOSFET"/>
+      <property name="Manufacturer" value="Infineon Technologies"/>
+      <property name="mpn" value="IRLML6244TRPBF"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <property name="ki_description" value="N-Channel MOSFET"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>38e597f2-9132-41f9-84f8-d8496d7aaaf7</tstamps>
+    </comp>
+    <comp ref="Q2">
+      <value>IRLML6244TRPBF</value>
+      <footprint>lib_fp:IRLML6244TRPBF</footprint>
+      <datasheet>datasheets/Infineon-IRLML6244.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Infineon Technologies</field>
+        <field name="mpn">IRLML6244TRPBF</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="NMOS_GSD" description="N-Channel MOSFET"/>
+      <property name="Manufacturer" value="Infineon Technologies"/>
+      <property name="mpn" value="IRLML6244TRPBF"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <property name="ki_description" value="N-Channel MOSFET"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d6948d3c-8101-4416-832f-2124f09f646e</tstamps>
+    </comp>
+    <comp ref="Q3">
+      <value>DMP2035UVTQ-7</value>
+      <footprint>lib_fp:SOT23-6P95_280X100L40X37N</footprint>
+      <datasheet>datasheets/Diodes-Incorporated-DMP2035UVTQ.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Diodes Incorporated</field>
+        <field name="mpn">DMP2035UVTQ-7</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="PMOS" description=""/>
+      <property name="Manufacturer" value="Diodes Incorporated"/>
+      <property name="mpn" value="DMP2035UVTQ-7"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cc09dfce-3f88-49e2-b0fa-b9128c7b81f1</tstamps>
+    </comp>
+    <comp ref="Q4">
+      <value>DMP2035UVTQ-7</value>
+      <footprint>lib_fp:SOT23-6P95_280X100L40X37N</footprint>
+      <datasheet>datasheets/Diodes-Incorporated-DMP2035UVTQ.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Diodes Incorporated</field>
+        <field name="mpn">DMP2035UVTQ-7</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="PMOS_DGS" description=""/>
+      <property name="Manufacturer" value="Diodes Incorporated"/>
+      <property name="mpn" value="DMP2035UVTQ-7"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c79e802c-9bf5-47e1-bb9f-bea61cb40733</tstamps>
+    </comp>
+    <comp ref="R1">
+      <value>10K</value>
+      <footprint>lib_fp:RESC160X80X55L30N</footprint>
+      <datasheet>datasheets/Vishay-Dale-DCRCWe3.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Vishay Dale</field>
+        <field name="Package">0603</field>
+        <field name="Power Rating">100mW</field>
+        <field name="Tolerance">5%</field>
+        <field name="mpn">CRCW060310K0JNEB</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="r_small" description=""/>
+      <property name="Manufacturer" value="Vishay Dale"/>
+      <property name="mpn" value="CRCW060310K0JNEB"/>
+      <property name="Tolerance" value="5%"/>
+      <property name="Power Rating" value="100mW"/>
+      <property name="Package" value="0603"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f75b7bf5-3e51-4e46-98f4-8f8b382817a7</tstamps>
+    </comp>
+    <comp ref="R2">
+      <value>10K</value>
+      <footprint>lib_fp:RESC160X80X55L30N</footprint>
+      <datasheet>datasheets/Vishay-Dale-DCRCWe3.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Vishay Dale</field>
+        <field name="Package">0603</field>
+        <field name="Power Rating">100mW</field>
+        <field name="Tolerance">5%</field>
+        <field name="mpn">CRCW060310K0JNEB</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="r_small" description=""/>
+      <property name="Manufacturer" value="Vishay Dale"/>
+      <property name="mpn" value="CRCW060310K0JNEB"/>
+      <property name="Tolerance" value="5%"/>
+      <property name="Power Rating" value="100mW"/>
+      <property name="Package" value="0603"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>7c1ad9a3-62a0-43c5-a78e-6bbb73a76a7e</tstamps>
+    </comp>
+    <comp ref="R3">
+      <value>10K</value>
+      <footprint>lib_fp:RESC160X80X55L30N</footprint>
+      <datasheet>datasheets/Vishay-Dale-DCRCWe3.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Vishay Dale</field>
+        <field name="Package">0603</field>
+        <field name="Power Rating">100mW</field>
+        <field name="Tolerance">5%</field>
+        <field name="mpn">CRCW060310K0JNEB</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="r_small" description=""/>
+      <property name="Manufacturer" value="Vishay Dale"/>
+      <property name="mpn" value="CRCW060310K0JNEB"/>
+      <property name="Tolerance" value="5%"/>
+      <property name="Power Rating" value="100mW"/>
+      <property name="Package" value="0603"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>25d95f49-e028-458e-b878-35cb6b09af42</tstamps>
+    </comp>
+    <comp ref="R4">
+      <value>10K</value>
+      <footprint>lib_fp:RESC160X80X55L30N</footprint>
+      <datasheet>datasheets/Vishay-Dale-DCRCWe3.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Vishay Dale</field>
+        <field name="Package">0603</field>
+        <field name="Power Rating">100mW</field>
+        <field name="Tolerance">5%</field>
+        <field name="mpn">CRCW060310K0JNEB</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="r_small" description=""/>
+      <property name="Manufacturer" value="Vishay Dale"/>
+      <property name="mpn" value="CRCW060310K0JNEB"/>
+      <property name="Tolerance" value="5%"/>
+      <property name="Power Rating" value="100mW"/>
+      <property name="Package" value="0603"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8e80d448-8bcb-4ee2-bef5-5b3c3fe1d238</tstamps>
+    </comp>
+    <comp ref="R5">
+      <value>10K</value>
+      <footprint>lib_fp:RESC160X80X55L30N</footprint>
+      <datasheet>datasheets/Vishay-Dale-DCRCWe3.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Vishay Dale</field>
+        <field name="Package">0603</field>
+        <field name="Power Rating">100mW</field>
+        <field name="Tolerance">5%</field>
+        <field name="mpn">CRCW060310K0JNEB</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="r_small" description=""/>
+      <property name="Manufacturer" value="Vishay Dale"/>
+      <property name="mpn" value="CRCW060310K0JNEB"/>
+      <property name="Tolerance" value="5%"/>
+      <property name="Power Rating" value="100mW"/>
+      <property name="Package" value="0603"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>61a9cac1-aa1b-48f5-a66e-1b804e12e8b4</tstamps>
+    </comp>
+    <comp ref="R6">
+      <value>10K</value>
+      <footprint>lib_fp:RESC160X80X55L30N</footprint>
+      <datasheet>datasheets/Vishay-Dale-DCRCWe3.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Vishay Dale</field>
+        <field name="Package">0603</field>
+        <field name="Power Rating">100mW</field>
+        <field name="Tolerance">5%</field>
+        <field name="mpn">CRCW060310K0JNEB</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="r_small" description=""/>
+      <property name="Manufacturer" value="Vishay Dale"/>
+      <property name="mpn" value="CRCW060310K0JNEB"/>
+      <property name="Tolerance" value="5%"/>
+      <property name="Power Rating" value="100mW"/>
+      <property name="Package" value="0603"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>fc75d0c9-b5f4-4304-aa11-1288ec19aaa5</tstamps>
+    </comp>
+    <comp ref="R7">
+      <value>10K</value>
+      <footprint>lib_fp:RESC160X80X55L30N</footprint>
+      <datasheet>datasheets/Vishay-Dale-DCRCWe3.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Vishay Dale</field>
+        <field name="Package">0603</field>
+        <field name="Power Rating">100mW</field>
+        <field name="Tolerance">5%</field>
+        <field name="mpn">CRCW060310K0JNEB</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="r_small" description=""/>
+      <property name="Manufacturer" value="Vishay Dale"/>
+      <property name="mpn" value="CRCW060310K0JNEB"/>
+      <property name="Tolerance" value="5%"/>
+      <property name="Power Rating" value="100mW"/>
+      <property name="Package" value="0603"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d889a70f-88ed-4f15-a3c6-46bd3a4aaee6</tstamps>
+    </comp>
+    <comp ref="R8">
+      <value>10K</value>
+      <footprint>lib_fp:RESC160X80X55L30N</footprint>
+      <datasheet>datasheets/Vishay-Dale-DCRCWe3.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Vishay Dale</field>
+        <field name="Package">0603</field>
+        <field name="Power Rating">100mW</field>
+        <field name="Tolerance">5%</field>
+        <field name="mpn">CRCW060310K0JNEB</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="r_small" description=""/>
+      <property name="Manufacturer" value="Vishay Dale"/>
+      <property name="mpn" value="CRCW060310K0JNEB"/>
+      <property name="Tolerance" value="5%"/>
+      <property name="Power Rating" value="100mW"/>
+      <property name="Package" value="0603"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5cc57d34-0750-4342-8df4-cc8a9231dbde</tstamps>
+    </comp>
+    <comp ref="R9">
+      <value>10K</value>
+      <footprint>lib_fp:RESC160X80X55L30N</footprint>
+      <datasheet>datasheets/Vishay-Dale-DCRCWe3.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Vishay Dale</field>
+        <field name="Package">0603</field>
+        <field name="Power Rating">100mW</field>
+        <field name="Tolerance">5%</field>
+        <field name="mpn">CRCW060310K0JNEB</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="r_small" description=""/>
+      <property name="Manufacturer" value="Vishay Dale"/>
+      <property name="mpn" value="CRCW060310K0JNEB"/>
+      <property name="Tolerance" value="5%"/>
+      <property name="Power Rating" value="100mW"/>
+      <property name="Package" value="0603"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f0f1d695-590c-41bf-8c2a-12010d1d1a94</tstamps>
+    </comp>
+    <comp ref="R10">
+      <value>10K</value>
+      <footprint>lib_fp:RESC160X80X55L30N</footprint>
+      <datasheet>datasheets/Vishay-Dale-DCRCWe3.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Vishay Dale</field>
+        <field name="Package">0603</field>
+        <field name="Power Rating">100mW</field>
+        <field name="Tolerance">5%</field>
+        <field name="mpn">CRCW060310K0JNEB</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="r_small" description=""/>
+      <property name="Manufacturer" value="Vishay Dale"/>
+      <property name="mpn" value="CRCW060310K0JNEB"/>
+      <property name="Tolerance" value="5%"/>
+      <property name="Power Rating" value="100mW"/>
+      <property name="Package" value="0603"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>34ce57f6-108e-484d-87f5-9e023a62cec1</tstamps>
+    </comp>
+    <comp ref="R11">
+      <value>0R</value>
+      <footprint>lib_fp:ResistorJumper-3</footprint>
+      <datasheet>datasheets/Vishay-Dale-DCRCWe3.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Vishay Dale</field>
+        <field name="mpn">CRCW06030000Z0EA</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="Resistor_Jumper_3_Open" description="Resistor_Jumper, 3-pole, both open"/>
+      <property name="Manufacturer" value="Vishay Dale"/>
+      <property name="mpn" value="CRCW06030000Z0EA"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <property name="ki_description" value="Resistor_Jumper, 3-pole, both open"/>
+      <property name="ki_keywords" value="Jumper"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>118b8c79-0a8f-4d20-bb70-1e191a5b2c92</tstamps>
+    </comp>
+    <comp ref="R12">
+      <value>0R</value>
+      <footprint>lib_fp:ResistorJumper-3</footprint>
+      <datasheet>datasheets/Vishay-Dale-DCRCWe3.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Vishay Dale</field>
+        <field name="mpn">CRCW06030000Z0EA</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="Resistor_Jumper_3_Open" description="Resistor_Jumper, 3-pole, both open"/>
+      <property name="Manufacturer" value="Vishay Dale"/>
+      <property name="mpn" value="CRCW06030000Z0EA"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <property name="ki_description" value="Resistor_Jumper, 3-pole, both open"/>
+      <property name="ki_keywords" value="Jumper"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>2919830a-1d64-4102-b3ba-5a5fc2943f94</tstamps>
+    </comp>
+    <comp ref="SW1">
+      <value>SS-12F44-G5</value>
+      <footprint>lib_fp:SS-12D07-VG_GA_PA</footprint>
+      <datasheet>datasheets/C&amp;K-SS-12D07-VG_GA_PA.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">C&amp;K</field>
+        <field name="mpn">SS-12D07-VG 4 NS GA PA</field>
+        <field name="populate">0</field>
+      </fields>
+      <libsource lib="lib_sch" part="SW_SPDT" description="Switch, single pole double throw"/>
+      <property name="Manufacturer" value="C&amp;K"/>
+      <property name="mpn" value="SS-12D07-VG 4 NS GA PA"/>
+      <property name="populate" value="0"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <property name="ki_description" value="Switch, single pole double throw"/>
+      <property name="ki_keywords" value="switch single-pole double-throw spdt ON-ON"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>67d9d22d-62ce-492a-8957-aed569758f16</tstamps>
+    </comp>
+    <comp ref="SW2">
+      <value>PTS647SM38SMTR2LFS</value>
+      <footprint>lib_fp:SW_4.5x4.5</footprint>
+      <datasheet>datasheets/C&amp;K-PTS647.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">C&amp;K</field>
+        <field name="mpn">PTS 647 SM38 SMTR2 LFS</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="PTS645SK50SMTR92LFS" description=""/>
+      <property name="Manufacturer" value="C&amp;K"/>
+      <property name="mpn" value="PTS 647 SM38 SMTR2 LFS"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>d3a4a2c2-81f9-4e78-a96f-96e9bf52c127</tstamps>
+    </comp>
+    <comp ref="SW3">
+      <value>PTS647SM38SMTR2LFS</value>
+      <footprint>lib_fp:SW_4.5x4.5</footprint>
+      <datasheet>datasheets/C&amp;K-PTS647.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">C&amp;K</field>
+        <field name="mpn">PTS 647 SM38 SMTR2 LFS</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="PTS645SK50SMTR92LFS" description=""/>
+      <property name="Manufacturer" value="C&amp;K"/>
+      <property name="mpn" value="PTS 647 SM38 SMTR2 LFS"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5b551534-65d2-47bc-b965-78d751be1297</tstamps>
+    </comp>
+    <comp ref="SW4">
+      <value>PTS647SM38SMTR2LFS</value>
+      <footprint>lib_fp:SW_4.5x4.5</footprint>
+      <datasheet>datasheets/C&amp;K-PTS647.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">C&amp;K</field>
+        <field name="mpn">PTS 647 SM38 SMTR2 LFS</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="PTS645SK50SMTR92LFS" description=""/>
+      <property name="Manufacturer" value="C&amp;K"/>
+      <property name="mpn" value="PTS 647 SM38 SMTR2 LFS"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>106bdbf1-2c1e-4f91-9e1a-9e94a4980e66</tstamps>
+    </comp>
+    <comp ref="SW5">
+      <value>PTS647SM38SMTR2LFS</value>
+      <footprint>lib_fp:SW_4.5x4.5</footprint>
+      <datasheet>datasheets/C&amp;K-PTS647.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">C&amp;K</field>
+        <field name="mpn">PTS 647 SM38 SMTR2 LFS</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="PTS645SK50SMTR92LFS" description=""/>
+      <property name="Manufacturer" value="C&amp;K"/>
+      <property name="mpn" value="PTS 647 SM38 SMTR2 LFS"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>82153f04-5dcf-430d-b353-eb551f53eceb</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>XIAO RP2040</value>
+      <footprint>lib_fp:QtPy</footprint>
+      <datasheet>https://wiki.seeedstudio.com/XIAO-RP2040/</datasheet>
+      <fields>
+        <field name="Manufacturer">Seeed Studio</field>
+        <field name="mpn">XIAO RP2040</field>
+        <field name="populate">0</field>
+      </fields>
+      <libsource lib="lib_sch" part="xiaoRP2040" description=""/>
+      <property name="Manufacturer" value="Seeed Studio"/>
+      <property name="mpn" value="XIAO RP2040"/>
+      <property name="populate" value="0"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>57bb7df6-881d-4647-b667-d8717ea6b323</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>BME280</value>
+      <footprint>lib_fp:BME280</footprint>
+      <datasheet>datasheets/Bosch-Sensortec-BME280.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">Bosch Sensortec</field>
+        <field name="mpn">BME280</field>
+        <field name="populate">1</field>
+      </fields>
+      <libsource lib="lib_sch" part="BME280" description=""/>
+      <property name="Manufacturer" value="Bosch Sensortec"/>
+      <property name="mpn" value="BME280"/>
+      <property name="populate" value="1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>40820084-deec-4d11-8443-0c6bce9a8715</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>HS96L03W2C03</value>
+      <footprint>lib_fp:HS96L03W2C03</footprint>
+      <datasheet>datasheets/HS-HS96L03W2C03.pdf</datasheet>
+      <fields>
+        <field name="Manufacturer">SHENZHEN HANSHENG INDUSTRAIL CO.</field>
+        <field name="mpn">HS96L03W2C03</field>
+        <field name="populate">0</field>
+      </fields>
+      <libsource lib="lib_sch" part="OLED_module" description=""/>
+      <property name="Manufacturer" value="SHENZHEN HANSHENG INDUSTRAIL CO."/>
+      <property name="mpn" value="HS96L03W2C03"/>
+      <property name="populate" value="0"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="destinationWeatherStation_r4-5.kicad_sch"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>8af22483-6986-4db8-a478-e3da735ace71</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="lib_sch" part="BME280">
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">BME280</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="power_in"/>
+        <pin num="2" name="CSB" type="input"/>
+        <pin num="3" name="SDI" type="bidirectional"/>
+        <pin num="4" name="SCK" type="input"/>
+        <pin num="5" name="SDO" type="bidirectional"/>
+        <pin num="6" name="VDDIO" type="power_in"/>
+        <pin num="7" name="GND" type="power_in"/>
+        <pin num="8" name="VDD" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="lib_sch" part="Conn_01x02_Female">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02_Female</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="lib_sch" part="Conn_01x04_Female">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04_Female</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="lib_sch" part="Micro_SD_Card_Det1">
+      <description>Micro SD Card Socket with one card detection pin</description>
+      <docs>https://datasheet.lcsc.com/lcsc/2110151630_XKB-Connectivity-XKTF-015-N_C381082.pdf</docs>
+      <footprints>
+        <fp>microSD*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Micro_SD_Card_Det1</field>
+        <field name="Datasheet">https://datasheet.lcsc.com/lcsc/2110151630_XKB-Connectivity-XKTF-015-N_C381082.pdf</field>
+      </fields>
+      <pins>
+        <pin num="1" name="DAT2" type="bidirectional"/>
+        <pin num="2" name="DAT3/CD" type="bidirectional"/>
+        <pin num="3" name="CMD" type="input"/>
+        <pin num="4" name="VDD" type="power_in"/>
+        <pin num="5" name="CLK" type="input"/>
+        <pin num="6" name="VSS" type="power_in"/>
+        <pin num="7" name="DAT0" type="bidirectional"/>
+        <pin num="8" name="DAT1" type="bidirectional"/>
+        <pin num="9" name="DET" type="passive"/>
+        <pin num="10" name="SHIELD" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="lib_sch" part="MountingHole_Pad">
+      <description>Mounting Hole with connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*Pad*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole_Pad</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="1" type="input"/>
+      </pins>
+    </libpart>
+    <libpart lib="lib_sch" part="NMOS_GSD">
+      <description>N-Channel MOSFET</description>
+      <footprints>
+        <fp>SOT?23*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">Q</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="lib_sch" part="OLED_module">
+      <fields>
+        <field name="Reference">U2</field>
+        <field name="Value">OLED_module</field>
+        <field name="Footprint">DS-connectors:OLED_module</field>
+      </fields>
+      <pins>
+        <pin num="1" name="GND" type="passive"/>
+        <pin num="2" name="VCC" type="power_in"/>
+        <pin num="3" name="SCL" type="input"/>
+        <pin num="4" name="SDA" type="bidirectional"/>
+      </pins>
+    </libpart>
+    <libpart lib="lib_sch" part="PMOS">
+      <docs>https://www.diodes.com/assets/Datasheets/DMP2035UVTQ.pdf</docs>
+      <fields>
+        <field name="Reference">Q2</field>
+        <field name="Value">DMP2035UVTQ-7</field>
+        <field name="Footprint">DS-Master-Package-SO:SOT23-6P95_280X100L40X37N</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/DMP2035UVTQ.pdf</field>
+        <field name="Manufacturer">Diodes Incorporated</field>
+        <field name="MPN">DMP2035UVTQ-7</field>
+        <field name="populate">1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+        <pin num="5" name="" type="passive"/>
+        <pin num="6" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="lib_sch" part="PMOS_DGS">
+      <docs>https://www.diodes.com/assets/Datasheets/DMP2035UVTQ.pdf</docs>
+      <fields>
+        <field name="Reference">Q4</field>
+        <field name="Value">DMP2035UVTQ-7</field>
+        <field name="Footprint">DS-Master-Package-SO:SOT23-6P95_280X100L40X37N</field>
+        <field name="Datasheet">https://www.diodes.com/assets/Datasheets/DMP2035UVTQ.pdf</field>
+        <field name="Manufacturer">Diodes Incorporated</field>
+        <field name="MPN">DMP2035UVTQ-7</field>
+        <field name="populate">1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+        <pin num="5" name="" type="passive"/>
+        <pin num="6" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="lib_sch" part="PTS645SK50SMTR92LFS">
+      <fields>
+        <field name="Reference">S</field>
+        <field name="Value">PTS645SK50SMTR92LFS</field>
+        <field name="Footprint">SW_PTS645SK50SMTR92LFS</field>
+        <field name="MANUFACTURER">CnK</field>
+        <field name="STANDARD">Manufacturer Recommendations</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+        <pin num="3" name="" type="passive"/>
+        <pin num="4" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="lib_sch" part="Resistor_Jumper_3_Open">
+      <description>Resistor_Jumper, 3-pole, both open</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Jumper*</fp>
+        <fp>TestPoint*3Pads*</fp>
+        <fp>TestPoint*Bridge*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">R</field>
+        <field name="Value">Resistor_Jumper_3_Open</field>
+        <field name="Datasheet">~</field>
+        <field name="Manufacturer">~</field>
+        <field name="mpn">~</field>
+        <field name="populate">1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="C" type="input"/>
+        <pin num="3" name="B" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="lib_sch" part="SW_SPDT">
+      <description>Switch, single pole double throw</description>
+      <docs>~</docs>
+      <fields>
+        <field name="Reference">SW</field>
+        <field name="Value">SW_SPDT</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="A" type="passive"/>
+        <pin num="2" name="B" type="passive"/>
+        <pin num="3" name="C" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="lib_sch" part="c_small">
+      <description>Ceramic capacitor symbol</description>
+      <fields>
+        <field name="Reference">C?</field>
+        <field name="Value">c_small</field>
+        <field name="Tolerance">TOL</field>
+        <field name="Voltage Rating">VOLTAGE</field>
+        <field name="Package">PKG</field>
+        <field name="populate">1</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="lib_sch" part="r_small">
+      <fields>
+        <field name="Reference">R?</field>
+        <field name="Value">VALUE</field>
+        <field name="Tolerance">TOL</field>
+        <field name="Power Rating">PWR</field>
+        <field name="Package">PKG</field>
+      </fields>
+      <pins>
+        <pin num="1" name="" type="passive"/>
+        <pin num="2" name="" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="lib_sch" part="xiaoRP2040">
+      <fields>
+        <field name="Reference">U</field>
+      </fields>
+      <pins>
+        <pin num="1" name="D0" type="bidirectional"/>
+        <pin num="2" name="D1" type="bidirectional"/>
+        <pin num="3" name="D2" type="bidirectional"/>
+        <pin num="4" name="D3" type="bidirectional"/>
+        <pin num="5" name="D4" type="bidirectional"/>
+        <pin num="6" name="D5" type="bidirectional"/>
+        <pin num="7" name="D6" type="bidirectional"/>
+        <pin num="8" name="D7" type="bidirectional"/>
+        <pin num="9" name="D8" type="bidirectional"/>
+        <pin num="10" name="D9" type="bidirectional"/>
+        <pin num="11" name="D10" type="bidirectional"/>
+        <pin num="12" name="3V3" type="power_out"/>
+        <pin num="13" name="GND" type="passive"/>
+        <pin num="14" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="lib_sch">
+      <uri>D:\Destination-SPACE-Files\development\docs\ds-weather-station-v4.5\hardware/lib_sch/lib_sch.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="+3V3">
+      <node ref="C1" pin="1" pintype="passive"/>
+      <node ref="C2" pin="1" pintype="passive"/>
+      <node ref="C3" pin="1" pintype="passive"/>
+      <node ref="C4" pin="1" pintype="passive"/>
+      <node ref="J2" pin="4" pinfunction="VDD" pintype="power_in"/>
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="R1" pin="1" pintype="passive"/>
+      <node ref="R10" pin="1" pintype="passive"/>
+      <node ref="R11" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="R12" pin="3" pinfunction="B" pintype="passive"/>
+      <node ref="R2" pin="1" pintype="passive"/>
+      <node ref="R3" pin="1" pintype="passive"/>
+      <node ref="R4" pin="1" pintype="passive"/>
+      <node ref="R5" pin="1" pintype="passive"/>
+      <node ref="R6" pin="1" pintype="passive"/>
+      <node ref="R7" pin="1" pintype="passive"/>
+      <node ref="R8" pin="1" pintype="passive"/>
+      <node ref="R9" pin="1" pintype="passive"/>
+      <node ref="SW2" pin="1" pintype="passive"/>
+      <node ref="SW2" pin="2" pintype="passive"/>
+      <node ref="SW3" pin="1" pintype="passive"/>
+      <node ref="SW3" pin="2" pintype="passive"/>
+      <node ref="SW4" pin="1" pintype="passive"/>
+      <node ref="SW4" pin="2" pintype="passive"/>
+      <node ref="SW5" pin="1" pintype="passive"/>
+      <node ref="SW5" pin="2" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="3V3" pintype="power_out"/>
+      <node ref="U2" pin="6" pinfunction="VDDIO" pintype="power_in"/>
+      <node ref="U2" pin="8" pinfunction="VDD" pintype="power_in"/>
+    </net>
+    <net code="2" name="/BME_CS">
+      <node ref="R8" pin="2" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="CSB" pintype="input"/>
+    </net>
+    <net code="3" name="/CD">
+      <node ref="J2" pin="9" pinfunction="DET" pintype="passive"/>
+      <node ref="R1" pin="2" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="D2" pintype="bidirectional"/>
+    </net>
+    <net code="4" name="/CS_SD">
+      <node ref="J2" pin="2" pinfunction="DAT3/CD" pintype="bidirectional"/>
+      <node ref="R6" pin="2" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="D3" pintype="bidirectional"/>
+    </net>
+    <net code="5" name="/DAT1">
+      <node ref="J2" pin="8" pinfunction="DAT1" pintype="bidirectional"/>
+      <node ref="R2" pin="2" pintype="passive"/>
+    </net>
+    <net code="6" name="/DAT2">
+      <node ref="J2" pin="1" pinfunction="DAT2" pintype="bidirectional"/>
+      <node ref="R7" pin="2" pintype="passive"/>
+    </net>
+    <net code="7" name="/MISO">
+      <node ref="J2" pin="7" pinfunction="DAT0" pintype="bidirectional"/>
+      <node ref="R3" pin="2" pintype="passive"/>
+      <node ref="U1" pin="10" pinfunction="D9" pintype="bidirectional"/>
+    </net>
+    <net code="8" name="/MOSI">
+      <node ref="J2" pin="3" pinfunction="CMD" pintype="input"/>
+      <node ref="R5" pin="2" pintype="passive"/>
+      <node ref="U1" pin="11" pinfunction="D10" pintype="bidirectional"/>
+    </net>
+    <net code="9" name="/OLED1">
+      <node ref="R11" pin="2" pinfunction="C" pintype="input"/>
+      <node ref="U3" pin="1" pinfunction="GND" pintype="passive"/>
+    </net>
+    <net code="10" name="/OLED2">
+      <node ref="R12" pin="2" pinfunction="C" pintype="input"/>
+      <node ref="U3" pin="2" pinfunction="VCC" pintype="power_in"/>
+    </net>
+    <net code="11" name="/SCK">
+      <node ref="J2" pin="5" pinfunction="CLK" pintype="input"/>
+      <node ref="R4" pin="2" pintype="passive"/>
+      <node ref="U1" pin="9" pinfunction="D8" pintype="bidirectional"/>
+    </net>
+    <net code="12" name="/SCL">
+      <node ref="J3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="R10" pin="2" pintype="passive"/>
+      <node ref="U1" pin="6" pinfunction="D5" pintype="bidirectional"/>
+      <node ref="U2" pin="4" pinfunction="SCK" pintype="input"/>
+      <node ref="U3" pin="3" pinfunction="SCL" pintype="input"/>
+    </net>
+    <net code="13" name="/SDA">
+      <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="R9" pin="2" pintype="passive"/>
+      <node ref="U1" pin="5" pinfunction="D4" pintype="bidirectional"/>
+      <node ref="U2" pin="3" pinfunction="SDI" pintype="bidirectional"/>
+      <node ref="U3" pin="4" pinfunction="SDA" pintype="bidirectional"/>
+    </net>
+    <net code="14" name="/SW2">
+      <node ref="SW2" pin="3" pintype="passive"/>
+      <node ref="SW2" pin="4" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="D0" pintype="bidirectional"/>
+    </net>
+    <net code="15" name="/SW3">
+      <node ref="SW3" pin="3" pintype="passive"/>
+      <node ref="SW3" pin="4" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="D1" pintype="bidirectional"/>
+    </net>
+    <net code="16" name="/SW4">
+      <node ref="SW4" pin="3" pintype="passive"/>
+      <node ref="SW4" pin="4" pintype="passive"/>
+      <node ref="U1" pin="7" pinfunction="D6" pintype="bidirectional"/>
+    </net>
+    <net code="17" name="/SW5">
+      <node ref="SW5" pin="3" pintype="passive"/>
+      <node ref="SW5" pin="4" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="D7" pintype="bidirectional"/>
+    </net>
+    <net code="18" name="GND">
+      <node ref="C1" pin="2" pintype="passive"/>
+      <node ref="C2" pin="2" pintype="passive"/>
+      <node ref="C3" pin="2" pintype="passive"/>
+      <node ref="C4" pin="2" pintype="passive"/>
+      <node ref="J2" pin="10" pinfunction="SHIELD" pintype="passive"/>
+      <node ref="J2" pin="6" pinfunction="VSS" pintype="power_in"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="Q1" pin="2" pintype="passive"/>
+      <node ref="Q2" pin="2" pintype="passive"/>
+      <node ref="R11" pin="3" pinfunction="B" pintype="passive"/>
+      <node ref="R12" pin="1" pinfunction="A" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="GND" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="5" pinfunction="SDO" pintype="bidirectional"/>
+      <node ref="U2" pin="7" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="19" name="Net-(J1-Pin_1)">
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="SW1" pin="2" pinfunction="B" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(J1-Pin_2)">
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="Q1" pin="1" pintype="passive"/>
+      <node ref="Q2" pin="3" pintype="passive"/>
+      <node ref="Q3" pin="3" pintype="passive"/>
+      <node ref="Q4" pin="1" pintype="passive"/>
+      <node ref="Q4" pin="2" pintype="passive"/>
+      <node ref="Q4" pin="5" pintype="passive"/>
+      <node ref="Q4" pin="6" pintype="passive"/>
+    </net>
+    <net code="21" name="Net-(SW1-A)">
+      <node ref="Q1" pin="3" pintype="passive"/>
+      <node ref="Q2" pin="1" pintype="passive"/>
+      <node ref="Q3" pin="1" pintype="passive"/>
+      <node ref="Q3" pin="2" pintype="passive"/>
+      <node ref="Q3" pin="5" pintype="passive"/>
+      <node ref="Q3" pin="6" pintype="passive"/>
+      <node ref="Q4" pin="3" pintype="passive"/>
+      <node ref="SW1" pin="1" pinfunction="A" pintype="passive"/>
+    </net>
+    <net code="22" name="VCC">
+      <node ref="Q3" pin="4" pintype="passive"/>
+      <node ref="Q4" pin="4" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="VIN" pintype="power_in"/>
+    </net>
+    <net code="27" name="unconnected-(SW1-C-Pad3)">
+      <node ref="SW1" pin="3" pinfunction="C" pintype="passive+no_connect"/>
+    </net>
+  </nets>
+</export>
