@@ -287,7 +287,7 @@ void loop() {
 
   //Print data to serial monitor
   char buffer[1024]; // Create 1024bit buffer for data output
-  sprintf(buffer, "\n|%02d:%02d:%02d| %5.2f|%5.2f| %5.2f|%6.1f|%5.1f| %4.0f| %5.0f|  %5.1f|  %5.2f|%7.2f|", hh, mm, ss, BME280_TEMP, BME280_HUMD, BME280_HI, BME280_PRES, BME280_ALT, SCD40_CO2, ENS160_TVOC, ENS160_AQI, LTR390_UVI, VEML7700_LUX);
+  sprintf(buffer, "\n|%02d:%02d:%02d| %5.2f|%5.2f| %5.2f|%6.1f|%5.1f| %4.0f| %5.0f|  %5.1f|  %5.2f|%7.2f|\t%d", hh, mm, ss, BME280_TEMP, BME280_HUMD, BME280_HI, BME280_PRES, BME280_ALT, SCD40_CO2, ENS160_TVOC, ENS160_AQI, LTR390_UVI, VEML7700_LUX, menu);
   Serial.print(buffer); // Print buffer
 
   //Print data to OLED display
@@ -425,7 +425,8 @@ void loop1() {
       display.clearDisplay();
       i = 0;
       menu = 4;
-      while(i = 0){
+      delay(1);
+      while(i == 0){
         if(digitalRead(BTN1)){
           delay(100);
           if(digitalRead(BTN1)){
