@@ -5,7 +5,7 @@ This is an example sketch for the Destination Weather Station v4.5 remote
 sensing platform to test the BME280 humidity, pressue, & temperature sensor as
 well as the other classroom kit sensors.
 
-modified 2024-01-16
+modified 2024-03-04
 by Madison Gleydura
 
 MIT LICENSE AGREEMENT
@@ -39,19 +39,13 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <Adafruit_VEML7700.h>
 #include <iostream>
 #include <ScioSense_ENS160.h>
-#include <SdFat.h>
 #include <SensirionI2CScd4x.h>
-#include <SPI.h>
 #include <Wire.h>
 
 #define BTN1 26
 #define BTN2 27
 #define BTN3 0
 #define BTN4 1
-#define FILE_BASE_NAME "Log_"
-#define RGB_R 17
-#define RGB_G 16
-#define RGB_B 25
 #define NEOPIXEL_PWR 11
 #define NEOPIXEL_PIN 12
 #define NEOPIXEL_NUM 1
@@ -68,19 +62,21 @@ Adafruit_NeoPixel pixels(NEOPIXEL_NUM, NEOPIXEL_PIN, NEO_GRB + NEO_KHZ800);
 Adafruit_SSD1306 display(SCREEN_WIDTH, SCREEN_HEIGHT, &Wire, OLED_RESET);
 Adafruit_VEML7700 VEML7700 = Adafruit_VEML7700();
 ScioSense_ENS160 ENS160(ENS160_I2CADDR_0);
-SdFat SD;
-SdFile file;
 SensirionI2CScd4x scd4x;
 
 //Define data types
 float BME280_TEMP, BME280_PRES, BME280_HUMD, BME280_HI, BME280_ALT, ENS160_AQI, ENS160_AQI_PREV, ENS160_TVOC, ENS160_eCO2, LTR390_UVI, LTR390_RAW, VEML7700_ALS, VEML7700_WHITE, VEML7700_LUX, SCD40_CO2, SCD40_TEMP, SCD40_HUMD;
+bool BME280_STS = 1;
+bool ENS160_STS = 1;
+bool LTR390_STS = 1;
+bool VEML7700_STS = 1;
+bool SCD40_STS = 1;
 int clock_timer, hh, mm, ss, BTN1_STATE, BTN2_STATE, BTN3_STATE, BTN4_STATE;
 uint16_t SCD40_CO2_RAW;
-const uint8_t SD_chipSelect = 29;
-char fileName[13] = FILE_BASE_NAME "00.csv";
 int menu = 1;
 int i = 0;
 bool logging = false;
+int delayAmmount = 1000; //milliseconds
 
 void setup() {
   Serial.begin(115200); // Set serial stream to 115200bits/s
@@ -88,12 +84,14 @@ void setup() {
 
   //Initialize BME280 sensor
   if(!BME280.begin(0x76, &Wire)){
+    BME280_STS = 0;
     Serial.print("\n\nBME280 not found");
   }
 
   //Initialize ENS160 sensor
   if(ENS160.begin()){
     if(!ENS160.setMode(ENS160_OPMODE_STD)){
+      ENS160_STS = 0;
       Serial.print("\n\nENS160 failed to init");
     }
     delay(10);
@@ -103,11 +101,13 @@ void setup() {
     }
   }
   else{
+    ENS160_STS = 0;
     Serial.print("\n\nENS160 not found");
   }
 
   //Initialize LTR390 sensor
   if(!LTR390.begin()){
+    LTR390_STS = 0;
     Serial.print("\n\nLTR390 not found");
   }
   else{
@@ -120,6 +120,7 @@ void setup() {
 
   //Initialize VEML7700 sensor
   if(!VEML7700.begin()){
+    VEML7700_STS = 0;
     Serial.print("\n\nVEML7700 not found");
   }
   else{
@@ -131,6 +132,7 @@ void setup() {
   //Initialize SCD40 sensor
   scd4x.begin(Wire);
   if(scd4x.stopPeriodicMeasurement() || scd4x.startPeriodicMeasurement()){
+    SCD40_STS = 0;
     Serial.print("\n\nSCD40 failed to respond");
   }
 
@@ -149,35 +151,6 @@ void setup() {
   pixels.begin();
   pinMode(NEOPIXEL_PWR, OUTPUT);
   digitalWrite(NEOPIXEL_PWR, HIGH);
-  pinMode(RGB_R, OUTPUT);
-  pinMode(RGB_G, OUTPUT);
-  pinMode(RGB_B, OUTPUT);
-
-  //Initialize SD card
-  const uint8_t BASE_NAME_SIZE = sizeof(FILE_BASE_NAME) - 1;
-  if(!SD.begin(SD_chipSelect, SD_SCK_MHZ(50))){
-    SD.initErrorHalt();
-  }
-  if(BASE_NAME_SIZE > 6){
-    Serial.print("\n\nFile base name too long");
-  }
-  while(SD.exists(fileName)){
-    if(fileName[BASE_NAME_SIZE + 1] != '9'){
-      fileName[BASE_NAME_SIZE + 1]++;
-    }
-    else if(fileName[BASE_NAME_SIZE] != '9'){
-      fileName[BASE_NAME_SIZE + 1] = '0';
-      fileName[BASE_NAME_SIZE]++;
-    }
-    else{
-      Serial.print("\n\nCan't create file name");
-    }
-  }
-  if(!file.open(fileName, O_WRONLY | O_CREAT | O_EXCL)){
-    Serial.print("\n\nError opening file");
-  }
-  file.println(F("Time (s),Temp (C),Hum (%),HI (C),PRES (hPa),ALT (m),CO2 (ppm),TVOC (ppb),AQI (0-300),UVI (0-11),LUX (k-lux)"));
-
 
   //Print data table header
   Serial.print("+==============================================================================+\n|  TIME  | TEMP | HUM |  HI  | PRES | ALT | CO2 | TVOC |  AQI  |  UVI  |  LUX  |\n|hh:mm:ss| (°C) | (%) | (°C) | hPa  | (m) |(ppm)|(ppb.)|(0-300)|(0-+11)|(k-lux)|\n+==============================================================================+");
@@ -204,8 +177,7 @@ void setup1() {
 
 void loop() {
   int delay_timer = millis(); // Reset delay timer
-  pixels.clear();
-  pixels.setPixelColor(0, pixels.Color(15, 25, 205));
+  pixels.setPixelColor(0, pixels.Color(0, 0, 80));
   pixels.show();
 
   //Collect Data from BME280
@@ -234,7 +206,7 @@ void loop() {
   }
   
   // Retrieve data from ENS160 VOC sensor
-  if(ENS160.available()){
+  if(ENS160.available() && ENS160_STS){
     ENS160.measure(true);
     ENS160_AQI = ENS160.getAQI(); // Get air quality index
     ENS160_TVOC = ENS160.getTVOC(); // Get total volitle organic compond concentration in parts per billion
@@ -246,16 +218,30 @@ void loop() {
     ENS160_AQI = alpha*TVOC_CONSENTRATION + (1-alpha)*ENS160_AQI_PREV; // Calculated from NowCast EPA algorithm
     ENS160_AQI_PREV = ENS160_AQI;
   }
+  else{
+    ENS160_AQI = 0;
+    ENS160_TVOC = 0;
+    ENS160_eCO2 = 0;
+  }
 
   //Retrieve data from LTR390 UVA sensor
-  if(LTR390.newDataAvailable()){
+  if(LTR390.newDataAvailable() && LTR390_STS){
     LTR390_RAW = LTR390.readUVS();
     LTR390_UVI = LTR390_RAW / 2300.00; // Calculate UV-index from raw values
   }
+  else{
+    LTR390_UVI = 0;
+  }
 
-  VEML7700_LUX = VEML7700.readLux(); // Retrieve data from VEML7700 ALS sensor
+  //Retrieve data from VEML7700 ambient light sensor
+  if(VEML7700_STS){
+    VEML7700_LUX = VEML7700.readLux(); // Retrieve data from VEML7700 ALS sensor
+  }
+  else{
+    VEML7700_LUX = 0;
+  }
 
-  //Retrieve data from SCD40 CO2 sensors
+  //Retrieve data from SCD40 CO2 sensor
   bool isDataReady = false; // Reset Data-Ready flag
   if(scd4x.getDataReadyFlag(isDataReady)){ // Check if there is data available to read
   }
@@ -268,6 +254,9 @@ void loop() {
     else{
       SCD40_CO2 = static_cast<float>(SCD40_CO2_RAW); // Cast CO2 unsigned 16bit-integer to type float
     }
+  }
+  else if(!SCD40_STS){
+    SCD40_CO2 = 0;
   }
   else{ // If data is not ready, skip measurment
   }
@@ -287,19 +276,13 @@ void loop() {
 
   //Print data to serial monitor
   char buffer[1024]; // Create 1024bit buffer for data output
-  sprintf(buffer, "\n|%02d:%02d:%02d| %5.2f|%5.2f| %5.2f|%6.1f|%5.1f| %4.0f| %5.0f|  %5.1f|  %5.2f|%7.2f|\t%d", hh, mm, ss, BME280_TEMP, BME280_HUMD, BME280_HI, BME280_PRES, BME280_ALT, SCD40_CO2, ENS160_TVOC, ENS160_AQI, LTR390_UVI, VEML7700_LUX, menu);
+  sprintf(buffer, "\n|%02d:%02d:%02d| %5.2f|%5.2f| %5.2f|%6.1f|%5.1f| %4.0f| %5.0f|  %5.1f|  %5.2f|%7.2f|", hh, mm, ss, BME280_TEMP, BME280_HUMD, BME280_HI, BME280_PRES, BME280_ALT, SCD40_CO2, ENS160_TVOC, ENS160_AQI, LTR390_UVI, VEML7700_LUX);
   Serial.print(buffer); // Print buffer
 
   //Print data to OLED display
   switch(menu){
     case 1: // Weather menu
       display.clearDisplay();
-      if(logging){
-        display.setCursor(110,0); display.setTextColor(SSD1306_WHITE); display.print("O");
-      }
-      else{
-        display.setCursor(110,0); display.setTextColor(SSD1306_BLACK); display.print("O"); display.setTextColor(SSD1306_WHITE);
-      }
       display.setCursor(0,0);   display.print("Weather Menu");
       display.setCursor(0,20);  display.print("Temperature: ");  display.print(BME280_TEMP, 2);  display.print("C");
       display.setCursor(0,30);  display.print("Pressure: ");     display.print(BME280_PRES, 1);  display.print("hPa");
@@ -310,12 +293,6 @@ void loop() {
     
     case 2: //Air quality menu
       display.clearDisplay();
-      if(logging){
-        display.setCursor(110,0); display.setTextColor(SSD1306_WHITE); display.print("O");
-      }
-      else{
-        display.setCursor(110,0); display.setTextColor(SSD1306_BLACK); display.print("O"); display.setTextColor(SSD1306_WHITE);
-      }
       display.setCursor(0,0);   display.print("Air Quality Menu");
       display.setCursor(0,20);  display.print("CO2: ");          display.print(SCD40_CO2, 0);    display.print("ppm");
       display.setCursor(0,30);  display.print("eCO2: ");         display.print(ENS160_eCO2, 0);  display.print("ppm");
@@ -326,94 +303,18 @@ void loop() {
 
     case 3: //Light menu
       display.clearDisplay();
-      if(logging){
-        display.setCursor(110,0); display.setTextColor(SSD1306_WHITE); display.print("O");
-      }
-      else{
-        display.setCursor(110,0); display.setTextColor(SSD1306_BLACK); display.print("O"); display.setTextColor(SSD1306_WHITE);
-      }
       display.setCursor(0,0);   display.print("Light Menu");
       display.setCursor(0,20);  display.print("UVI: ");          display.print(LTR390_UVI, 2);
       display.setCursor(0,30);  display.print("ALS: ");         display.print(VEML7700_LUX, 2);  display.print("Lux");
       display.display();
       break;
-
-    case 4:
-      display.clearDisplay();
-      if(logging){
-        display.setCursor(110,0); display.setTextColor(SSD1306_WHITE); display.print("O");
-      }
-      else{
-        display.setCursor(110,0); display.setTextColor(SSD1306_BLACK); display.print("O"); display.setTextColor(SSD1306_WHITE);
-      }
-      display.setCursor(0,0); display.print("SD Config...");
-      int16_t x1, y1;
-      uint16_t w, h;
-      display.getTextBounds("Start Recording...", 2, 20, &x1, &y1, &w,&h);
-      display.fillRect(x1-2,y1-2,w+4,h+4, SSD1306_WHITE);
-      display.setTextColor(SSD1306_BLACK); display.setCursor(2,20); display.print("Start Recording...");
-      display.setTextColor(SSD1306_WHITE); display.setCursor(2,30); display.print("Pause Recording...");
-      display.setTextColor(SSD1306_WHITE); display.setCursor(2,40); display.print("Exit Settings");
-      display.display();
-      break;
-    
-    case 5:
-      display.clearDisplay();
-      if(logging){
-        display.setCursor(110,0); display.setTextColor(SSD1306_WHITE); display.print("O");
-      }
-      else{
-        display.setCursor(110,0); display.setTextColor(SSD1306_BLACK); display.print("O"); display.setTextColor(SSD1306_WHITE);
-      }
-      display.setCursor(0,0); display.print("SD Config...");
-      x1, y1;
-      w, h;
-      display.getTextBounds("Pause Recording...", 2, 30, &x1, &y1, &w,&h);
-      display.fillRect(x1-2,y1-2,w+4,h+4, SSD1306_WHITE);
-      display.setTextColor(SSD1306_WHITE); display.setCursor(2,20); display.print("Start Recording...");
-      display.setTextColor(SSD1306_BLACK); display.setCursor(2,30); display.print("Pause Recording...");
-      display.setTextColor(SSD1306_WHITE); display.setCursor(2,40); display.print("Exit Settings");
-      display.display();
-      break;
-
-    case 6:
-      display.clearDisplay();
-      if(logging){
-        display.setCursor(110,0); display.setTextColor(SSD1306_WHITE); display.print("O");
-      }
-      else{
-        display.setCursor(110,0); display.setTextColor(SSD1306_BLACK); display.print("O"); display.setTextColor(SSD1306_WHITE);
-      }
-      display.setCursor(0,0); display.print("SD Config...");
-      x1, y1;
-      w, h;
-      display.getTextBounds("Exit Settings", 2, 40, &x1, &y1, &w,&h);
-      display.fillRect(x1-2,y1-2,w+4,h+4, SSD1306_WHITE);
-      display.setTextColor(SSD1306_WHITE); display.setCursor(2,20); display.print("Start Recording...");
-      display.setTextColor(SSD1306_WHITE); display.setCursor(2,30); display.print("Pause Recording...");
-      display.setTextColor(SSD1306_BLACK); display.setCursor(2,40); display.print("Exit Settings");
-      display.setTextColor(SSD1306_WHITE);
-      display.display();
-      break;
-
-    default:
-      break;
   }
 
-  //Write data to the SD card
-  if(logging){
-    char FILE_BUFFER[1024];
-    sprintf(FILE_BUFFER, "%02d:%02d:%02d,%5.2f,%5.2f,%5.2f,%6.1f,%5.1f,%4.0f,%5.0f,%5.1f,%5.2f,%7.2f", hh, mm, ss, BME280_TEMP, BME280_HUMD, BME280_HI, BME280_PRES, BME280_ALT, SCD40_CO2, ENS160_TVOC, ENS160_AQI, LTR390_UVI, VEML7700_LUX);
-    delay(50);
-    file.println(FILE_BUFFER);
-    if(!file.sync() || file.getWriteError()){
-      Serial.print("\n\nWrite Error");
-    }
-  }
-
+  pixels.clear();
+  pixels.show();
   //Idle until it is time for next data read
   while(true){
-    if(millis() - delay_timer >= 1000) break;
+    if(millis() - delay_timer >= delayAmmount) break;
     delay(5);
   }
 }
@@ -422,45 +323,7 @@ void loop1() {
   if(digitalRead(BTN1)){
     delay(100);
     if(digitalRead(BTN1)){
-      display.clearDisplay();
-      i = 0;
-      menu = 4;
-      delay(1);
-      while(i == 0){
-        if(digitalRead(BTN1)){
-          delay(100);
-          if(digitalRead(BTN1)){
-            menu = menu - 1;
-            if(menu < 4){
-              menu = 6;
-            }
-          }
-        }
-        if(digitalRead(BTN2)){
-          delay(100);
-          if(digitalRead(BTN2)){
-            menu = menu + 1;
-            if(menu > 6){
-              menu = 4;
-            }
-          }
-        }
-        if(digitalRead(BTN4)){
-          delay(100);
-          if(digitalRead(BTN4)){
-            if(menu = 4){
-              logging = true;
-            }
-            else if(menu = 5){
-              logging = false;
-            }
-            else{
-            }
-            menu = 1;
-            i = 1;
-          }
-        }
-      }
+      
     }
     delay(100);
   }
@@ -468,7 +331,7 @@ void loop1() {
   if(digitalRead(BTN2)){
     delay(100);
     if(digitalRead(BTN2)){
-      // do something
+      
     }
     delay(100);
   }

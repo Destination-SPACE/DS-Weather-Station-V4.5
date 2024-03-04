@@ -4,7 +4,7 @@ DESTINATION WEATHER STATION V4.5 EXAMPLE - WEATHER STATION
 This is an example sketch for the Destination Weather Station v4.5 remote
 sensing platform to allow students to measure and record weather data.
 
-modified 2024-01-30
+modified 2024-03-04
 by Madison Gleydura
 
 MIT LICENSE AGREEMENT
@@ -73,6 +73,11 @@ SensirionI2CScd4x scd4x;
 
 //Define data types
 float BME280_TEMP, BME280_PRES, BME280_HUMD, BME280_HI, BME280_ALT, ENS160_AQI, ENS160_AQI_PREV, ENS160_TVOC, ENS160_eCO2, LTR390_UVI, LTR390_RAW, VEML7700_ALS, VEML7700_WHITE, VEML7700_LUX, SCD40_CO2, SCD40_TEMP, SCD40_HUMD;
+bool BME280_STS = 1;
+bool ENS160_STS = 1;
+bool LTR390_STS = 1;
+bool VEML7700_STS = 1;
+bool SCD40_STS = 1;
 int clock_timer, hh, mm, ss, BTN1_STATE, BTN2_STATE, BTN3_STATE, BTN4_STATE;
 uint16_t SCD40_CO2_RAW;
 const uint8_t SD_chipSelect = 29;
@@ -80,6 +85,10 @@ char fileName[13] = FILE_BASE_NAME "00.csv";
 int menu = 1;
 int i = 0;
 bool logging = false;
+int color_red = 0;
+int color_grn = 0;
+int color_blu = 0;
+int delayAmmount = 1000; //milliseconds
 
 void setup() {
   Serial.begin(115200); // Set serial stream to 115200bits/s
@@ -87,12 +96,14 @@ void setup() {
 
   //Initialize BME280 sensor
   if(!BME280.begin(0x76, &Wire)){
+    BME280_STS = 0;
     Serial.print("\n\nBME280 not found");
   }
 
   //Initialize ENS160 sensor
   if(ENS160.begin()){
     if(!ENS160.setMode(ENS160_OPMODE_STD)){
+      ENS160_STS = 0;
       Serial.print("\n\nENS160 failed to init");
     }
     delay(10);
@@ -102,11 +113,13 @@ void setup() {
     }
   }
   else{
+    ENS160_STS = 0;
     Serial.print("\n\nENS160 not found");
   }
 
   //Initialize LTR390 sensor
   if(!LTR390.begin()){
+    LTR390_STS = 0;
     Serial.print("\n\nLTR390 not found");
   }
   else{
@@ -119,6 +132,7 @@ void setup() {
 
   //Initialize VEML7700 sensor
   if(!VEML7700.begin()){
+    VEML7700_STS = 0;
     Serial.print("\n\nVEML7700 not found");
   }
   else{
@@ -130,6 +144,7 @@ void setup() {
   //Initialize SCD40 sensor
   scd4x.begin(Wire);
   if(scd4x.stopPeriodicMeasurement() || scd4x.startPeriodicMeasurement()){
+    SCD40_STS = 0;
     Serial.print("\n\nSCD40 failed to respond");
   }
 
@@ -203,8 +218,8 @@ void setup1() {
 
 void loop() {
   int delay_timer = millis(); // Reset delay timer
-  pixels.clear();
-  pixels.setPixelColor(0, pixels.Color(15, 25, 205));
+  pixels.setPixelColor(0, pixels.Color(0, 0, 80));
+  setColor(color_grn, color_red, color_blu);
   pixels.show();
 
   //Collect Data from BME280
@@ -233,7 +248,7 @@ void loop() {
   }
   
   // Retrieve data from ENS160 VOC sensor
-  if(ENS160.available()){
+  if(ENS160.available() && ENS160_STS){
     ENS160.measure(true);
     ENS160_AQI = ENS160.getAQI(); // Get air quality index
     ENS160_TVOC = ENS160.getTVOC(); // Get total volitle organic compond concentration in parts per billion
@@ -245,16 +260,30 @@ void loop() {
     ENS160_AQI = alpha*TVOC_CONSENTRATION + (1-alpha)*ENS160_AQI_PREV; // Calculated from NowCast EPA algorithm
     ENS160_AQI_PREV = ENS160_AQI;
   }
+  else{
+    ENS160_AQI = 0;
+    ENS160_TVOC = 0;
+    ENS160_eCO2 = 0;
+  }
 
   //Retrieve data from LTR390 UVA sensor
-  if(LTR390.newDataAvailable()){
+  if(LTR390.newDataAvailable() && LTR390_STS){
     LTR390_RAW = LTR390.readUVS();
     LTR390_UVI = LTR390_RAW / 2300.00; // Calculate UV-index from raw values
   }
+  else{
+    LTR390_UVI = 0;
+  }
 
-  VEML7700_LUX = VEML7700.readLux(); // Retrieve data from VEML7700 ALS sensor
+  //Retrieve data from VEML7700 ambient light sensor
+  if(VEML7700_STS){
+    VEML7700_LUX = VEML7700.readLux(); // Retrieve data from VEML7700 ALS sensor
+  }
+  else{
+    VEML7700_LUX = 0;
+  }
 
-  //Retrieve data from SCD40 CO2 sensors
+  //Retrieve data from SCD40 CO2 sensor
   bool isDataReady = false; // Reset Data-Ready flag
   if(scd4x.getDataReadyFlag(isDataReady)){ // Check if there is data available to read
   }
@@ -267,6 +296,9 @@ void loop() {
     else{
       SCD40_CO2 = static_cast<float>(SCD40_CO2_RAW); // Cast CO2 unsigned 16bit-integer to type float
     }
+  }
+  else if(!SCD40_STS){
+    SCD40_CO2 = 0;
   }
   else{ // If data is not ready, skip measurment
   }
@@ -395,6 +427,21 @@ void loop() {
       display.display();
       break;
 
+    case 7:
+      display.clearDisplay();
+      if(logging){
+        display.setCursor(110,0); display.setTextColor(SSD1306_WHITE); display.print("O");
+      }
+      else{
+        display.setCursor(110,0); display.setTextColor(SSD1306_BLACK); display.print("O"); display.setTextColor(SSD1306_WHITE);
+      }
+      display.setCursor(0,0); display.print("Destination WX Stn");
+      display.setCursor(2,20); display.print("gitlab.com/");
+      display.setCursor(2,30); display.print("Destination-SPACE");
+      display.setCursor(2,40); display.print("ds-weather-station-v4.5");
+      display.display();
+      break;
+
     default:
       break;
   }
@@ -409,10 +456,12 @@ void loop() {
       Serial.print("\n\nWrite Error");
     }
   }
-
+  pixels.clear();
+  pixels.show();
+  setColor(0, 0, 0);
   //Idle until it is time for next data read
   while(true){
-    if(millis() - delay_timer >= 1000) break;
+    if(millis() - delay_timer >= delayAmmount) break;
     delay(5);
   }
 }
@@ -424,10 +473,19 @@ void loop1() {
       display.clearDisplay();
       i = 0;
       menu = 4;
-      while(i = 0){
+      logging = true;
+      color_red = 255;
+      color_grn = 0;
+      color_blu = 0;
+      delay(1);
+      while(i == 0){
         if(digitalRead(BTN1)){
           delay(100);
           if(digitalRead(BTN1)){
+            logging = true;
+            color_red = 255;
+            color_grn = 0;
+            color_blu = 0;
             menu = menu - 1;
             if(menu < 4){
               menu = 6;
@@ -437,6 +495,10 @@ void loop1() {
         if(digitalRead(BTN2)){
           delay(100);
           if(digitalRead(BTN2)){
+            logging = false;
+            color_red = 0;
+            color_grn = 0;
+            color_blu = 0;
             menu = menu + 1;
             if(menu > 6){
               menu = 4;
@@ -447,10 +509,10 @@ void loop1() {
           delay(100);
           if(digitalRead(BTN4)){
             if(menu = 4){
-              logging = true;
+              //logging = true;
             }
             else if(menu = 5){
-              logging = false;
+              //logging = false;
             }
             else{
             }
@@ -466,7 +528,15 @@ void loop1() {
   if(digitalRead(BTN2)){
     delay(100);
     if(digitalRead(BTN2)){
-      // do something
+      display.clearDisplay();
+      display.setCursor(0,0);
+      display.print("Loading...");
+      display.display();
+      menu = 7;
+      while(digitalRead(BTN2)){
+        delay(100);
+      }
+      menu = 1;
     }
     delay(100);
   }
@@ -500,4 +570,10 @@ void loop1() {
     }
     delay(100);
   }
+}
+
+void setColor(int VAL_GRN, int VAL_RED, int VAL_BLU){
+  analogWrite(RGB_R, 255 - VAL_RED);
+  analogWrite(RGB_G, 255 - VAL_GRN);
+  analogWrite(RGB_B, 255 - VAL_BLU);
 }
