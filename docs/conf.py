@@ -32,5 +32,5 @@ master_doc = 'index'
 project = 'Destination Weather Station v4.5'
 copyright = '2024, Destination SPACE Inc.'
 html_show_sphinx = False
-html_theme = 'sphinx_rtd_theme'
+#html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
