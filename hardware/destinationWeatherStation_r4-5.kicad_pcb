@@ -39,11 +39,11 @@
     (stackup
       (layer "F.SilkS" (type "Top Silk Screen") (color "White") (material "Direct Printing"))
       (layer "F.Paste" (type "Top Solder Paste"))
-      (layer "F.Mask" (type "Top Solder Mask") (color "Black") (thickness 0.0254) (material "Liquid Ink") (epsilon_r 3.8) (loss_tangent 0))
+      (layer "F.Mask" (type "Top Solder Mask") (color "Purple") (thickness 0.0254) (material "Liquid Ink") (epsilon_r 3.8) (loss_tangent 0))
       (layer "F.Cu" (type "copper") (thickness 0.035))
       (layer "dielectric 1" (type "core") (color "FR4 natural") (thickness 1.4292) (material "FR408-HR") (epsilon_r 4.7) (loss_tangent 0.0091))
       (layer "B.Cu" (type "copper") (thickness 0.035))
-      (layer "B.Mask" (type "Bottom Solder Mask") (color "Black") (thickness 0.0254) (material "Liquid Ink") (epsilon_r 3.8) (loss_tangent 0))
+      (layer "B.Mask" (type "Bottom Solder Mask") (color "Purple") (thickness 0.0254) (material "Liquid Ink") (epsilon_r 3.8) (loss_tangent 0))
       (layer "B.Paste" (type "Bottom Solder Paste"))
       (layer "B.SilkS" (type "Bottom Silk Screen") (color "White") (material "Direct Printing"))
       (copper_finish "ENIG")
