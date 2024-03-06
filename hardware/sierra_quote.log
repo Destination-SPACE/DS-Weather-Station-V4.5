@@ -1,0 +1,39 @@
+03-05 10:35:26 sierra_kicad_order.action_sierra_quote 1192:Sierra Circuits Quote plugin version: 4.1 started
+03-05 10:35:26 STDERR 1551:C:\Users\madis\OneDrive\Public\Documents\KiCad\7.0\3rdparty\plugins\sierra_kicad_order\action_sierra_quote.py:112: wxPyDeprecationWarning: Call to deprecated item. Use SetSizeHints instead.
+03-05 10:35:26 STDERR 1551:  self.SetSizeHintsSz(sz1, sz2)
+03-05 10:35:27 STDOUT 1551:send:
+03-05 10:35:27 STDOUT 1551:b'POST /kiprod/client HTTP/1.1\r\nAccept-Encoding: identity\r\nContent-Length: 52\r\nHost: api.protoexpress-api.net\r\nUser-Agent: Python-urllib/3.9\r\nContent-Type: application/json\r\nAuthorization: Basic fd6b7a18-db05-11ee-8e92-743af47a13c1\r\nConnection: close\r\n\r\n'
+03-05 10:35:27 STDOUT 1551:send:
+03-05 10:35:27 STDOUT 1551:b'{"client_id":"fd6b7a18-db05-11ee-8e92-743af47a13c1"}'
+03-05 10:35:28 STDOUT 1551:reply:
+03-05 10:35:28 STDOUT 1551:'HTTP/1.1 200 OK\r\n'
+03-05 10:35:28 STDOUT 1551:header:
+03-05 10:35:28 STDOUT 1551:Date:
+03-05 10:35:28 STDOUT 1551:Tue, 05 Mar 2024 15:35:28 GMT
+03-05 10:35:28 STDOUT 1551:header:
+03-05 10:35:28 STDOUT 1551:Content-Type:
+03-05 10:35:28 STDOUT 1551:application/json
+03-05 10:35:28 STDOUT 1551:header:
+03-05 10:35:28 STDOUT 1551:Content-Length:
+03-05 10:35:28 STDOUT 1551:32
+03-05 10:35:28 STDOUT 1551:header:
+03-05 10:35:28 STDOUT 1551:Connection:
+03-05 10:35:28 STDOUT 1551:close
+03-05 10:35:28 STDOUT 1551:header:
+03-05 10:35:28 STDOUT 1551:x-amzn-RequestId:
+03-05 10:35:28 STDOUT 1551:76a94919-e007-4458-ab84-0835c1d78b4d
+03-05 10:35:28 STDOUT 1551:header:
+03-05 10:35:28 STDOUT 1551:Access-Control-Allow-Origin:
+03-05 10:35:28 STDOUT 1551:*
+03-05 10:35:28 STDOUT 1551:header:
+03-05 10:35:28 STDOUT 1551:Access-Control-Allow-Headers:
+03-05 10:35:28 STDOUT 1551:*
+03-05 10:35:28 STDOUT 1551:header:
+03-05 10:35:28 STDOUT 1551:x-amz-apigw-id:
+03-05 10:35:28 STDOUT 1551:UKZF-HDAoAMEdtQ=
+03-05 10:35:28 STDOUT 1551:header:
+03-05 10:35:28 STDOUT 1551:Access-Control-Allow-Methods:
+03-05 10:35:28 STDOUT 1551:*
+03-05 10:35:28 STDOUT 1551:header:
+03-05 10:35:28 STDOUT 1551:X-Amzn-Trace-Id:
+03-05 10:35:28 STDOUT 1551:Root=1-65e73bbf-64ee46ee4dee10970943ec80;Parent=7f48eeeb080c49bc;Sampled=0;lineage=4183c710:0|565c4136:0
