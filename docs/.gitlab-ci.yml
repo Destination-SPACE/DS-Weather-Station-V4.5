@@ -1,9 +1,16 @@
-image: python:3.9-slim
+stages:
+  - deploy
+
 pages:
   stage: deploy
+  image: python:3.9-slim
+  before_script:
+    - apt-get update && apt-get install make --no-install-recommends -y
+    - python -m pip install sphinx furo
   script:
-    - pip install -U sphinx
-    - sphinx-build -b html .public
+    - cd docs && make html
+  after_script:
+    - mv docs/ ./public/
   artifacts:
     paths:
     - public
