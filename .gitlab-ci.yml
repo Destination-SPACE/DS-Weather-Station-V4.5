@@ -1,13 +1,18 @@
-image: python:3.7-alpine
+stages:
+  - deploy
 
 pages:
+  stage: deploy
+  image: python:3.9-slim
+  before_script:
+    - apt-get update && apt-get install make --no-install-recommends -y
+    - python -m pip install sphinx furo
   script:
-  - pip install -U sphinx
-  - pip install sphinx_rtd_theme
-  - sphinx-build -d _build/doctrees docs/ _build/html
-  - mv _build/html public
+    - cd docs && make html
+  after_script:
+    - mv docs/ ./public/
   artifacts:
-        paths:
-        - public
-  only:
-  - master
+    paths:
+    - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
