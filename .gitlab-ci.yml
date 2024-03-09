@@ -6,7 +6,8 @@ stages:
 pages:
   stage: deploy
   script:
-    - python3 -m pip install sphinx
+    - python -m pip install sphinx
+    - python -m pip install sphinx-rtd-theme
     - sphinx-build -b html docs/ public/
   artifacts:
     paths:
