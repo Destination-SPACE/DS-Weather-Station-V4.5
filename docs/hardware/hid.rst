@@ -16,4 +16,5 @@
 Human Interface Devices
 =======================
 
-Coming soon!
+On the Destination Weather Station there are 4 buttons, which are the primary way to interact with the device. These buttons are each labeled with arrows ↑, ↓, ←, →. These buttons are used to scroll through the menus and to switch between the different data displays.
+
