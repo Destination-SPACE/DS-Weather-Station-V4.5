@@ -6,7 +6,7 @@
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-#import sphinx_rtd_theme
+import sphinx_rtd_theme
 
 project = 'DS-Weather-Station-V4.5'
 copyright = '2024, Destination SPACE Inc.'
@@ -17,7 +17,7 @@ release = '0.1.0'
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
 
 extensions = [
-    #'sphinx_rtd_theme',
+    'sphinx_rtd_theme',
     'sphinx.ext.autodoc',
 ]
 
@@ -32,5 +32,5 @@ master_doc = 'index'
 project = 'Destination Weather Station v4.5'
 copyright = '2024, Destination SPACE Inc.'
 html_show_sphinx = False
-#html_theme = 'sphinx_rtd_theme'
+html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']

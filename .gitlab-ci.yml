@@ -1,0 +1,12 @@
+image: python:3.12.1-slim-bookworm
+
+pages:
+  script:
+  - pip install -r requirements.txt
+  - sphinx-build -d _build/doctrees docs/ _build/html
+  - mv _build/docs/html public
+  artifacts:
+    paths:
+    - public
+  only:
+  - main
