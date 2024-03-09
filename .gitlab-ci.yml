@@ -1,12 +1,18 @@
-image: python:3.12.1-slim-bookworm
+stages:
+  - deploy
 
 pages:
+  stage: deploy
+  image: python:3.12.1-slim-bookworm
+  before_script:
+    - apt-get update && apt-get install make --no-install-recommends -y
+    - python pip install -U sphinx
   script:
-  - pip install -r requirements.txt
-  - sphinx-build -d _build/doctrees docs/ _build/html
-  - mv _build/docs/html public
+    - sphinx-build -b html ./public
+    - cd docs && make html
+    - mv docs/build/html ./public
   artifacts:
     paths:
-    - public
-  only:
-  - main
+      - public
+  rules:
+    if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
