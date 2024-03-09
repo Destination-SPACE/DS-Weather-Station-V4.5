@@ -13,4 +13,4 @@ pages:
     paths:
       - public
   only:
-    - main # 'master' was renamed to 'main' 
+    - main

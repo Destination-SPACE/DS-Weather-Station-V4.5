@@ -28,21 +28,30 @@ To solder the weather station, follow the instructions below. Tools required to 
 - Soldering iron
 - Solder wire
 
+Power Switch
+~~~~~~~~~~~~
+.. _power-switch:
+
+.. image:: assets/switchOnly.png
+      :target: assembly.html
+
+To solder the power switch to the weather station, insert it into the front side of the board. Flip the board over and solder the pins, starting with the two outer ones.
+
 XIAO RP2040
 ~~~~~~~~~~~
 .. _xiao-RP2040:
 
 To solder the XIAO RP2040 to the weather station, begin by inserting the long side of the 1x7 header pins into the weather station board as shown below.
 
-.. Insert image of headers in weather station
+.. image:: assets/xiaoPinsOnly.png
+      :target: assembly.html
 
-Next, flip the weather station over and solder all 14 pins to the weather station. Your solder joints should look similar to the image below.
-
-.. Insert image of headers soldered to weather station
+Next, flip the weather station over and solder all 14 pins to the weather station.
 
 Finally, flip the weather station back over and solder the XIAO to the short side of the header pins. After you are done, it should look like the image below.
 
-.. Insert image of the XIAO soldered to the weather station
+.. image:: assets/xiaoOnly.png
+      :target: assembly.html
 
 OLED Display
 ~~~~~~~~~~~~
@@ -52,19 +61,17 @@ To solder the OLED display to the weather station, you will follow similar proce
 
 Begin by inserting the long side of the 1x4 header into the weather station board as shown below.
 
-.. Insert image of OLED header in the weather station
+.. image:: assets/oledPinsOnly.png
+      :target: assembly.html
 
 Next, flip the board over and solder the pins to the back.
 
 Similarly, flip the board back over and solder the display to the front.
 
-Power Switch
-~~~~~~~~~~~~
-.. _power-switch:
-
 Final Assembly
 --------------
-.. _final-assembly:
+.. image:: assets/front.png
+      :target: assembly.html
 
 Batteries
 ~~~~~~~~~

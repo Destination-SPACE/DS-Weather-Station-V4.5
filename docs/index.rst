@@ -16,6 +16,9 @@ Destination Weather Station v4.5
 
 An Open Source Remote Sensing Platform for National Taiwan Normal University
 
+.. image:: assets/front.png
+      :target: index.html
+
 Contents
 --------
 
