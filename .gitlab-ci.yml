@@ -1,18 +1,17 @@
+image: python:3.12-alpine
+
 stages:
   - deploy
 
 pages:
+  tags:
+    - sphinx
   stage: deploy
-  image: python:3.12.1-slim-bookworm
-  before_script:
-    - apt-get update && apt-get install make --no-install-recommends -y
-    - python pip install -U sphinx
   script:
-    - sphinx-build -b html ./public
-    - cd docs && make html
-    - mv docs/build/html ./public
+    - python3 -m pip install sphinx
+    - sphinx-build -b html docs/source/ public/
   artifacts:
     paths:
       - public
-  rules:
-    if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH
+  only:
+    - main # 'master' was renamed to 'main' 
