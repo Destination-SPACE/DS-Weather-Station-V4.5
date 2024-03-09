@@ -25,8 +25,9 @@ Soldering
 .. _soldering:
 
 To solder the weather station, follow the instructions below. Tools required to complete these steps are:
-- Soldering iron
-- Solder wire
+
+* Soldering iron
+* Solder wire
 
 Power Switch
 ~~~~~~~~~~~~
