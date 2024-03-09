@@ -69,11 +69,16 @@ Next, flip the board over and solder the pins to the back.
 
 Similarly, flip the board back over and solder the display to the front.
 
+.. image:: ../assets/front.png
+      :target: assembly.html
+
 Final Assembly
 --------------
-.. image:: ../assets/front.png
+.. image:: ../assets/iso.png
       :target: assembly.html
 
 Batteries
 ~~~~~~~~~
 .. _batteries:
+
+Insert three (3) AAA batteries into the battery pack. Connect the JST-PH connector to the matching connector on the weather station.
