@@ -4,8 +4,6 @@ stages:
   - deploy
 
 pages:
-  tags:
-    - sphinx
   stage: deploy
   script:
     - python3 -m pip install sphinx
