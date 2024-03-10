@@ -16,4 +16,4 @@
 BME280
 ======
 
-Coming soon!
+The BME280 combined humidity and pressure sensor is a classic device used for accuratly measureing temperature, pressure, and humidity.

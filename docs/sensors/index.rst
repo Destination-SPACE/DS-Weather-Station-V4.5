@@ -16,4 +16,11 @@
 Destination Weather Station - Sensors
 =====================================
 
-Coming soon!
+The Destination Weather Station is equipped with a :ref:`Bosch BME280 combined humidity and pressure sensor<bme280>`.
+
+In the expansion sensor kit, several more environmental sensors are provided to measure a wide variety of parameters. These include:
+
+* :ref:`ScioSense ENS160 - Digital metal-oxide multi-gas sensor<ens160>`
+* :ref:`Lite-On LTR390 - Ambient light and ultravoiolet light sensor<ltr390>`
+* :ref:`Sensirion SCD40 - Miniature CO2 sensor<SCD40>`
+* :ref:`Vishay VEML7700 - High accuracy ambient light sensor<veml7700>`
