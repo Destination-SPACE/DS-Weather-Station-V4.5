@@ -30,14 +30,14 @@ Humidity
    * - Parameter
      - Specifications
 
-   * - ``Operating Range``
-     - ``0 - 100 %RH``
+   * - Operating Range
+     - 0 - 100 %RH
    
-   * - ``Absolute Accuracy``
-     - ``±3 %RH``
+   * - Absolute Accuracy
+     - ±3 %RH
    
-   * - ``Hysteresis``
-     - ``± %RH``
+   * - Hysteresis
+     - ± %RH
 
 .. image:: ../assets/rhGraph.png
       :target: bme280.html
@@ -51,14 +51,14 @@ Pressure
    * - Parameter
      - Specifications
 
-   * - ``Operating Range``
-     - ``0 - 1100 hPa``
+   * - Operating Range
+     - 0 - 1100 hPa
 
-   * - ``Absolute Accuracy``
-     - ``± 1.0 hPa``
+   * - Absolute Accuracy
+     - ± 1.0 hPa
 
-   * - ``Relative Accuracy (700 - 900 hPa & 25 - 40 °C)``
-     - ``± 0.12 hPa``
+   * - Relative Accuracy (700 - 900 hPa & 25 - 40 °C)
+     - ± 0.12 hPa
 
 Temperature
 ~~~~~~~~~~~
@@ -69,8 +69,8 @@ Temperature
    * - Parameter
      - Specifications
 
-   * - ``Operating Range``
-     - ``0 - 65 °C``
+   * - Operating Range
+     - 0 - 65 °C``
    
-   * - ``Absolute Accuracy``
-     - ``0.5 °C``
+   * - Absolute Accuracy
+     - 0.5 °C
