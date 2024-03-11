@@ -78,5 +78,6 @@ Temperature
 Functional Block Diagram
 ~~~~~~~~~~~~~~~~~~~~~~~~
 Below is a functional block diagram for how the BME280 sensor works. The data for each parameter (humidity, pressure, and temperature) are measured using an analog sensor. The data is then converted from an analog voltage signal to a digital data signal. This data is then passed to the logic side of the sensor which sends and recieves data to/from the host device.
+
 .. image:: ../assets/bme280BlockDiagram.png
       :target: bme280.html
