@@ -52,7 +52,7 @@ Specifications
 
 Below is a graph showing the spectral response of the sensor. It is sensitive to wavelengths ranging from 450nm - 650nm, normalized at 550nm.
 
-.. image:: ../assets/veml700_spectralResponse.png
+.. image:: ../assets/veml7700_spectralResponse.png
    :target: veml7700.html
 
 Additionally, below is a graph showing the sensitivity of the white light channel on the sensor.
