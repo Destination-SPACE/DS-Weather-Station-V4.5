@@ -135,6 +135,9 @@ The Ultra-Violet Spectrum
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 The ultra-violet spectrum ranges from 10nm to 400nm. This is further subdivided into different bands of intensity, which are used in remote sensing and to indicate their danger.
 
+.. image:: ../assets/ultravioletSpectrum.png
+   :target: ltr390.html
+
 UVA
 ~~~
 
