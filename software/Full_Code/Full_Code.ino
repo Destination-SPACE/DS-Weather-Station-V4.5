@@ -1,5 +1,5 @@
 /*******************************************************************************
-DESTINATION WEATHER STATION V4.5 EXAMPLE - WEATHER STATION
+DESTINATION WEATHER STATION V4.5 EXAMPLE - WEATHER STATION FULL EXAMPLE
 
 This is an example sketch for the Destination Weather Station v4.5 remote
 sensing platform to allow students to measure and record weather data.
@@ -170,7 +170,15 @@ void setup() {
   //Initialize SD card
   const uint8_t BASE_NAME_SIZE = sizeof(FILE_BASE_NAME) - 1;
   if(!SD.begin(SD_chipSelect, SD_SCK_MHZ(50))){
-    SD.initErrorHalt();
+    display.setCursor(0,0);
+    display.print("insert microSD card");
+    while(true){
+      if(SD.begin(SD_chipSelect, SD_SCK_MHZ(50))){
+        break;
+      }
+      delay(100);
+    }
+    display.clearDisplay();
   }
   if(BASE_NAME_SIZE > 6){
     Serial.print("\n\nFile base name too long");
