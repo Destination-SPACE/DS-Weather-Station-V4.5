@@ -7,6 +7,7 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 import sphinx_rtd_theme
+import pdfTex
 
 project = 'DS-Weather-Station-V4.5'
 copyright = '2024, Destination SPACE Inc.'
@@ -19,6 +20,7 @@ release = '0.1.0'
 extensions = [
     'sphinx_rtd_theme',
     'sphinx.ext.autodoc',
+    'pdflatex',
 ]
 
 templates_path = ['_templates']
