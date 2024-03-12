@@ -19,6 +19,7 @@ pages:
 latex:
   stage: deploy
   script:
+    - python -m pip install sphinx
     - python -m pip install pdflatex
     - sphinx-build -d latex docs/ docs/pdf
   only:
