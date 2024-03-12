@@ -8,6 +8,7 @@ pages:
   script:
     - python -m pip install sphinx
     - python -m pip install sphinx-rtd-theme
+    - python -m pip install pdflatex
 
     - sphinx-build -b html docs/ public/
   artifacts:
@@ -20,6 +21,7 @@ latex:
   stage: deploy
   script:
     - python -m pip install sphinx
+    - python -m pip install sphinx-rtd-theme
     - python -m pip install pdflatex
     - sphinx-build -d latex docs/ docs/pdf
   only:
