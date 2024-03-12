@@ -8,7 +8,7 @@ pages:
   script:
     - python -m pip install sphinx
     - python -m pip install sphinx-rtd-theme
-    - python -m pip install pdfTex
+    - python -m pip install pdflatex
     - sphinx-build -b html docs/ public/
     - sphinx-build -b latex docs/pdf public/
   artifacts:
