@@ -8,12 +8,18 @@ pages:
   script:
     - python -m pip install sphinx
     - python -m pip install sphinx-rtd-theme
-    - python -m pip install pdflatex
 
     - sphinx-build -b html docs/ public/
-    - sphinx-build -d latex docs/ docs/pdf
   artifacts:
     paths:
       - public
+  only:
+    - main
+
+latex:
+  stage: deploy
+  script:
+    - python -m pip install pdflatex
+    - sphinx-build -d latex docs/ docs/pdf
   only:
     - main
