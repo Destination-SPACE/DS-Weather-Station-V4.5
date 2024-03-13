@@ -52,9 +52,9 @@ Contents
    sensors/index
    sensors/bme280
    sensors/ens160
+   sensors/ltr390
    sensors/scd40
    sensors/veml7700
-   sensors/ltr390
 
 .. toctree::
    :caption: Hardware
