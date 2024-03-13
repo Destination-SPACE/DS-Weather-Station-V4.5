@@ -15,4 +15,4 @@
 
 Blink Sketch
 ============
-Coming soon!
+The :ref:`Blink<../../software/Blink/Blink.ino>` sketch is used as a beginners program and to test the on-board RGB LED and NeoPixel.

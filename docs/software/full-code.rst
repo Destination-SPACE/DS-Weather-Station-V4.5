@@ -11,9 +11,8 @@
    See the License for the specific language governing permissions and
    limitations under the License.
 
-.. _basics:
+.. _blink:
 
-Basics Sketch
-=============
-
-Coming soon!
+Full Code Sketch
+================
+The :ref:`Full Code<../../software/Full_Code/Full_Code.ino>` sketch incorporates all of the components of the weather station, including data recording. This has all the menus of the :ref:`Demo<../../software/Demo/Demo.ino>` sketch as well as a menu used to start and stop data recording.

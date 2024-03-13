@@ -15,5 +15,4 @@
 
 Demo Sketch
 ===========
-
-Coming soon!
+The :ref:`Demo<../../software/Demo/Demo.ino>` sketch is used as an introductory program to most of the features on the weather station. This includes scrollable menus for all sensors.

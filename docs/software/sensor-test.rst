@@ -15,5 +15,4 @@
 
 Sensor Test Sketch
 ==================
-
-Coming soon!
+The :ref:`Sensor Test<../../software/Sensor_Test/Sensor_Test.ino>` sketch is used to make sure the sensors on the weather station are working correctly. Use this sketch as the first program to upload after the :ref:`Blink<../../software/Blink/Blink.ino>` sketch.
