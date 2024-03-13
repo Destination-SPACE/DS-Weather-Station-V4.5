@@ -33,7 +33,6 @@ Contents
 
    hardware/the-kit
    hardware/assembly
-   tutorials/index
 
 .. toctree::
    :caption: Configuration
