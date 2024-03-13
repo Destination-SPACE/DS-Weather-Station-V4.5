@@ -15,4 +15,4 @@
 
 Full Code Sketch
 ================
-The :ref:`Full Code<../../software/Full_Code/Full_Code.ino>` sketch incorporates all of the components of the weather station, including data recording. This has all the menus of the :ref:`Demo<../../software/Demo/Demo.ino>` sketch as well as a menu used to start and stop data recording.
+The `Full Code <../../software/Full_Code/Full_Code.ino>`_ sketch incorporates all of the components of the weather station, including data recording. This has all the menus of the `Demo <../../software/Demo/Demo.ino>`_ sketch as well as a menu used to start and stop data recording.
