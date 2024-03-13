@@ -5,7 +5,7 @@ This is an example sketch for the Destination Weather Station v4.5 remote
 sensing platform to test the BME280 humidity, pressue, & temperature sensor as
 well as the other classroom kit sensors.
 
-modified 2024-01-16
+modified 2024-03-13
 by Madison Gleydura
 
 MIT LICENSE AGREEMENT
@@ -30,14 +30,17 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 *******************************************************************************/
 
+//Import system libraries
+#include <iostream>
+#include <Wire.h>
+
+//Import sensor libraries
 #include <Adafruit_BME280.h>
 #include <Adafruit_LTR390.h>
 #include <Adafruit_Sensor.h>
 #include <Adafruit_VEML7700.h>
-#include <iostream>
 #include <ScioSense_ENS160.h>
 #include <SensirionI2CScd4x.h>
-#include <Wire.h>
 
 #define SEALEVELPRESSURE_HPA (1013.25) //Define sea-level pressure as 1013.25hPa
 
@@ -195,7 +198,7 @@ void loop() {
     }
   }
 
-  char buffer[1024]; // Create 1024bit buffer for data output
+  char buffer[1024]; // Create 1024-bit buffer for data output
   sprintf(buffer, "\n|%02d:%02d:%02d| %5.2f|%5.2f| %5.2f|%6.1f|%5.1f| %4.0f| %5.0f|  %5.1f|  %5.2f|%7.2f|", hh, mm, ss, BME280_TEMP, BME280_HUMD, BME280_HI, BME280_PRES, BME280_ALT, SCD40_CO2, ENS160_TVOC, ENS160_AQI, LTR390_UVI, VEML7700_LUX);
   Serial.print(buffer); // Print buffer
   

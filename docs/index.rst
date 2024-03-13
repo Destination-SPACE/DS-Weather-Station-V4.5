@@ -39,7 +39,6 @@ Contents
    :maxdepth: 1
 
    software/install-arduino-ide
-   software/weather-station-configuration
 
 .. toctree::
    :caption: Experiments

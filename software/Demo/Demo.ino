@@ -5,7 +5,7 @@ This is an example sketch for the Destination Weather Station v4.5 remote
 sensing platform to test the BME280 humidity, pressue, & temperature sensor as
 well as the other classroom kit sensors.
 
-modified 2024-03-04
+modified 2024-03-13
 by Madison Gleydura
 
 MIT LICENSE AGREEMENT
@@ -30,6 +30,12 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 *******************************************************************************/
 
+//Import system libraries
+#include <iostream>
+#include <Wire.h>
+
+
+//Import device libraries
 #include <Adafruit_BME280.h>
 #include <Adafruit_GFX.h>
 #include <Adafruit_LTR390.h>
@@ -37,11 +43,10 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #include <Adafruit_Sensor.h>
 #include <Adafruit_SSD1306.h>
 #include <Adafruit_VEML7700.h>
-#include <iostream>
 #include <ScioSense_ENS160.h>
 #include <SensirionI2CScd4x.h>
-#include <Wire.h>
 
+//Define hardware
 #define BTN1 26
 #define BTN2 27
 #define BTN3 0
@@ -319,6 +324,7 @@ void loop() {
   }
 }
 
+//Button menu-input loop
 void loop1() {
   if(digitalRead(BTN1)){
     delay(100);

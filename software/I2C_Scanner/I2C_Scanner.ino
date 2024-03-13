@@ -4,7 +4,7 @@
 // Modified from https://playground.arduino.cc/Main/I2cScanner/
 // --------------------------------------
 
-#include <Wire.h>
+#include <Wire.h> // Import I2C Wire library
 
 // Set I2C bus to use: Wire, Wire1, etc.
 #define WIRE Wire
