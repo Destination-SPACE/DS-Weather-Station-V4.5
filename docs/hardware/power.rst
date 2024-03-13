@@ -16,4 +16,9 @@
 Power
 =====
 
-Coming soon!
+The power subsystem of the weather station was designed with reverse voltage protection in mind. Typically, if a battery is connected to a circuit backwards, it will not work, or worse, fry the entire system. This is why reverse current protection is often added to circuits to prevent such user error. This allows the user to not have to worry about the polarity of their LiPo battery. On the Destination Weather Station v4.5 we have taken this one step further, by not only having reverse voltage/polarity protection, but also correcting this polarity. This works using the same principal as an `AC rectifier <https://en.wikipedia.org/wiki/Rectifier>`_ circuit. This DC rectifier consists of two `N-Channel MOSFETs <https://en.wikipedia.org/wiki/NMOS_logic>`_ and two `P-Channel MOSFETs <https://en.wikipedia.org/wiki/PMOS_logic>`_. These MOSFETs combine to essentially create a rectifier circuit, which will only allow the correct polarity to pass through the FETs. A schematic of this circuit can be found below.
+
+.. image:: ../assets/dcRectifier.png
+   :target: power.html
+
+**Note:** There is no over-current protection, so make sure to not exceed 5V in.
