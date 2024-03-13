@@ -51,7 +51,6 @@ Contents
    :maxdepth: 1
 
    sensors/index
-   sensors/calibration
    sensors/bme280
    sensors/ens160
    sensors/scd40
