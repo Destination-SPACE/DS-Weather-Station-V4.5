@@ -74,7 +74,6 @@ Contents
    software/index
    software/blink
    software/basics
-   software/i2c-scanner
    software/sensor-test
    software/demo
 
