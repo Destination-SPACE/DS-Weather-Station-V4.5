@@ -1,7 +1,7 @@
 _build
 public
-latex/
-doctrees/
+docs/latex/
+docs/doctrees/
 *.000
 *.bak
 *.bck
