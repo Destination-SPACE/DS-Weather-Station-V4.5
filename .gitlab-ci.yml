@@ -10,12 +10,13 @@ pages:
     - python -m pip install sphinx-rtd-theme
     - python -m pip install pdflatex
 
-    - sphinx-build -b html docs/ public/
-    - sphinx-build -b latex docs/ docs/latex
-    - cp docs/latex/*.pdf docs/pdf
+    - sphinx-build -b html docs/ _build/html
+    - sphinx-build -M latex . _build/latex
+    - cp docs/latex/*.pdf docs/pdf/
   artifacts:
     paths:
-      - public
-      - public/latex
+      - _build/html/
+      - _build/latex/
+      - docs/pdf/
   only:
     - main
