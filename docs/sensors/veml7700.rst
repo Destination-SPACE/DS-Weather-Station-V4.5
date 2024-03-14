@@ -1,0 +1,61 @@
+.. Copyright 2024 Destination SPACE Inc.
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+.. _veml7700:
+
+VEML7700
+========
+
+.. image:: ../assets/MFG_VEML7700.png
+   :target: veml7700.html
+
+The VEML7700 high accuracy 16-bit light sensor can be used to precisely measure ambient light. Below is a functional block diagram of the device, where the sensor is an ALS photodiode.
+
+.. image:: ../assets/veml7700_blockDiagram.png
+   :target: veml7700.html
+
+Specifications
+~~~~~~~~~~~~~~
+
+.. list-table::
+   :header-rows: 1
+
+   * - Parameter
+     - Typical Value
+     - Units
+   
+   * - Digital resolution
+     - 0.0036
+     - lux/bit
+   
+   * - Detectable minimum illuminance
+     - 0.0072
+     - lux
+   
+   * - Detectable maximum illuminance
+     - 120,000
+     - lux
+   
+   * - Dark offset
+     - 3
+     - steps
+
+Below is a graph showing the spectral response of the sensor. It is sensitive to wavelengths ranging from 450nm - 650nm, normalized at 550nm.
+
+.. image:: ../assets/veml7700_spectralResponse.png
+   :target: veml7700.html
+
+Additionally, below is a graph showing the sensitivity of the white light channel on the sensor.
+
+.. image:: ../assets/veml7700_whiteSensitivitySpectrum.png
+   :target: veml7700.html

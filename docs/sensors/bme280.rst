@@ -1,0 +1,83 @@
+.. Copyright 2024 Destination SPACE Inc.
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at
+
+      http://www.apache.org/licenses/LICENSE-2.0
+
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.
+
+.. _bme280:
+
+BME280
+======
+
+.. image:: ../assets/MFG_BME280.jpg
+      :target: bme280.html
+
+The BME280 combined humidity and pressure sensor is a classic device used for accuratly measureing temperature, pressure, and humidity.
+
+Humidity
+~~~~~~~~
+
+.. list-table::
+   :header-rows: 1
+
+   * - Parameter
+     - Specifications
+
+   * - Operating Range
+     - 0 - 100 %RH
+   
+   * - Absolute Accuracy
+     - ±3 %RH
+   
+   * - Hysteresis
+     - ± %RH
+
+.. image:: ../assets/rhGraph.png
+      :target: bme280.html
+
+Pressure
+~~~~~~~~
+
+.. list-table::
+   :header-rows: 1
+
+   * - Parameter
+     - Specifications
+
+   * - Operating Range
+     - 0 - 1100 hPa
+
+   * - Absolute Accuracy
+     - ± 1.0 hPa
+
+   * - Relative Accuracy (700 - 900 hPa & 25 - 40 °C)
+     - ± 0.12 hPa
+
+Temperature
+~~~~~~~~~~~
+
+.. list-table::
+   :header-rows: 1
+
+   * - Parameter
+     - Specifications
+
+   * - Operating Range
+     - 0 - 65 °C
+   
+   * - Absolute Accuracy
+     - 0.5 °C
+
+Functional Block Diagram
+~~~~~~~~~~~~~~~~~~~~~~~~
+Below is a functional block diagram for how the BME280 sensor works. The data for each parameter (humidity, pressure, and temperature) are measured using an analog sensor. The data is then converted from an analog voltage signal to a digital data signal. This data is then passed to the logic side of the sensor which sends and recieves data to/from the host device.
+
+.. image:: ../assets/bme280BlockDiagram.png
+      :target: bme280.html
