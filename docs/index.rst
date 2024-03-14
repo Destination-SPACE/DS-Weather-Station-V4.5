@@ -19,34 +19,29 @@ An Open Source Remote Sensing Platform for National Taiwan Normal University
 .. image:: assets/front.png
       :target: index.html
 
-Contents
---------
+
+Getting Started
+---------------
 
 .. toctree::
-   :maxdepth: 1
-
-   about-the-project
-
-.. toctree::
-   :caption: Getting Started
-   :maxdepth: 1
+   :maxdepth: 2
 
    hardware/the-kit
    hardware/assembly
 
+Configuration
+-------------
+
 .. toctree::
-   :caption: Configuration
-   :maxdepth: 1
+   :maxdepth: 2
 
    software/install-arduino-ide
 
-.. toctree::
-   :caption: Experiments
+Sensors
+-------
 
-
 .. toctree::
-   :caption: Sensors
-   :maxdepth: 1
+   :maxdepth: 2
 
    sensors/index
    sensors/bme280
@@ -55,31 +50,35 @@ Contents
    sensors/scd40
    sensors/veml7700
 
+Hardware
+--------
+
 .. toctree::
-   :caption: Hardware
-   :maxdepth: 1
+   :maxdepth: 2
 
    hardware/index
    faq/troubleshooting
    hardware/power
    hardware/storage
    hardware/hid
-   hardware/pcb/index
-   hardware/pcb/manufacturing
+
+Software
+--------
 
 .. toctree::
-   :caption: Software
-   :maxdepth: 1
+   :maxdepth: 2
 
    software/index
    software/blink
-   software/basics
    software/sensor-test
    software/demo
+   software/full-code
+
+Miscellaneous
+-------------
 
 .. toctree::
-   :caption: Miscellaneous
-   :maxdepth: 1
+   :maxdepth: 2
 
    FAQ <faq/index>
 

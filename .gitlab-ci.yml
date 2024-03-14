@@ -8,16 +8,9 @@ pages:
   script:
     - python -m pip install sphinx
     - python -m pip install sphinx-rtd-theme
-    - python -m pip install pdflatex
-
-    - sphinx-build -b html docs/ docs/html
-    - sphinx-build -M latexpdf docs/ docs/
-    - mkdir -p docs/pdf
-    - cp docs/latex/*.pdf docs/pdf
+    - sphinx-build -b html docs/ public
   artifacts:
     paths:
-      - docs/html
-      - docs/latex
-      - docs/pdf
+      - public
   only:
     - main

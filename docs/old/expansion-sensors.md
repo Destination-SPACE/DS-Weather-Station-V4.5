@@ -1,1 +1,0 @@
-# Expansion Sensors Guide

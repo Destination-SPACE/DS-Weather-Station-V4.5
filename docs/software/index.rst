@@ -15,12 +15,13 @@
 
 Software
 ========
+
 Software for the Destination Weather Station v4.5.
 
 .. toctree::
    :maxdepth: 1
 
-   software/blink
-   software/sensor-test
-   software/demo
-   software/full-code
+   blink
+   sensor-test
+   demo
+   full-code

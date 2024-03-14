@@ -16,7 +16,7 @@
 ENS160
 ======
 
-.. image:: ../assets/MFG_ESN160.jpg
+.. image:: ../assets/MFG_ENS160.jpg
       :target: ens160.html
 
 The ENS160 digital metal-oxide multi-gas sensor measures volitile organic compounds (VOCs), which can be used to measure total VOC content (TVOC), air quality index (AQI), and calculate an approximate value for carbon-dioxide concentration (eCO2).
@@ -50,6 +50,7 @@ Specifications
    * - AQI-EPA
      - 0 - 500
      - 1
+     - -
 
 TVOC
 ~~~~

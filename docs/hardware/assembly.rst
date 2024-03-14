@@ -18,10 +18,11 @@ Destination Weather Station v4.5 Assembly
 
 The Destination Weather Station v4.5 is preassembled with the majority of the circuit components.
 
-Before using the weather station, you will need to :ref:`solder<soldering>` the :ref:`XIAO RP2040 microcontroller<_xiao-RP2040>`, :ref:`OLED display<oled-display>`, and :ref:`power switch<power-switch>`. Follow the instructions below to solder your weather station. You can then :ref:`connect the batteries<batteries>` and insert the microSD card.
+Before using the weather station, you will need to :ref:`solder<soldering>` the :ref:`XIAO RP2040 microcontroller<xiao-RP2040>`, :ref:`OLED display<oled-display>`, and :ref:`power switch<switch>`. Follow the instructions below to solder your weather station. You can then :ref:`connect the batteries<batteries>` and insert the microSD card.
 
 Soldering
 ---------
+
 .. _soldering:
 
 To solder the weather station, follow the instructions below. Tools required to complete these steps are:
@@ -31,7 +32,8 @@ To solder the weather station, follow the instructions below. Tools required to 
 
 Power Switch
 ~~~~~~~~~~~~
-.. _power-switch:
+
+.. _switch:
 
 .. image:: ../assets/switchOnly.png
       :target: assembly.html
@@ -40,6 +42,7 @@ To solder the power switch to the weather station, insert it into the front side
 
 XIAO RP2040
 ~~~~~~~~~~~
+
 .. _xiao-RP2040:
 
 To solder the XIAO RP2040 to the weather station, begin by inserting the long side of the 1x7 header pins into the weather station board as shown below.
@@ -56,6 +59,7 @@ Finally, flip the weather station back over and solder the XIAO to the short sid
 
 OLED Display
 ~~~~~~~~~~~~
+
 .. _oled-display:
 
 To solder the OLED display to the weather station, you will follow similar procedures to the steps above to solder the XIAO.
@@ -79,6 +83,7 @@ Final Assembly
 
 Batteries
 ~~~~~~~~~
+
 .. _batteries:
 
 Insert three (3) AAA batteries into the battery pack. Connect the JST-PH connector to the matching connector on the weather station.

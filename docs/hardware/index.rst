@@ -21,6 +21,6 @@ The Destination Weather Station was designed in `KiCad <https://www.kicad.org/>`
 .. toctree::
    :maxdepth: 1
 
-   hardware/power
-   hardware/storage
-   hardware/hid
+   power
+   storage
+   hid

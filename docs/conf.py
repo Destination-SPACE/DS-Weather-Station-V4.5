@@ -10,8 +10,8 @@ import sphinx_rtd_theme
 
 project = 'DS-Weather-Station-V4.5'
 copyright = '2024, Destination SPACE Inc.'
-author = 'DeepSpace00'
-release = '0.1.0'
+author = 'Destination SPACE Inc.'
+release = '0.2.0'
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
