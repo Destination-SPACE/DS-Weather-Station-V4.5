@@ -41,4 +41,4 @@ latex_elements = {
 }
 
 # Paths
-latex_output = '_build/latex'
+latex_output = 'docs/latex'
