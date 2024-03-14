@@ -9,8 +9,11 @@ pages:
     - python -m pip install sphinx
     - python -m pip install sphinx-rtd-theme
     - sphinx-build -b html docs/ public/
+    - sphinx-build -b latex docs/ docs/latex
+    - cd docs/latex && make
   artifacts:
     paths:
       - public
+      - docs/latex/*.pdf
   only:
     - main
