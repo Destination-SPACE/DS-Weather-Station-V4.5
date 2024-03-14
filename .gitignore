@@ -1,3 +1,7 @@
+_build
+public
+latex/
+doctrees/
 *.000
 *.bak
 *.bck
@@ -16,4 +20,3 @@ fp-info-cache
 *.dsn
 *.ses
 *.xml
-*.csv
