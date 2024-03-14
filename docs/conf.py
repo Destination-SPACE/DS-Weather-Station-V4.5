@@ -19,7 +19,7 @@ release = '0.1.0'
 extensions = [
     'sphinx_rtd_theme',
     'sphinx.ext.autodoc',
-    'sphinx.ext.latex',
+    'sphinx.ext.latexpdf',
 ]
 
 templates_path = ['_templates']
