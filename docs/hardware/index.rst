@@ -16,4 +16,11 @@
 Destination Weather Station - Hardware
 ======================================
 
-Coming soon!
+The Destination Weather Station was designed in `KiCad <https://www.kicad.org/>`_ and assembled by hand. the weather station includes several features that improve user experiance. These are:
+
+.. toctree::
+   :maxdepth: 1
+
+   hardware/power
+   hardware/storage
+   hardware/hid

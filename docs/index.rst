@@ -33,14 +33,12 @@ Contents
 
    hardware/the-kit
    hardware/assembly
-   tutorials/index
 
 .. toctree::
    :caption: Configuration
    :maxdepth: 1
 
    software/install-arduino-ide
-   software/weather-station-configuration
 
 .. toctree::
    :caption: Experiments
@@ -51,12 +49,11 @@ Contents
    :maxdepth: 1
 
    sensors/index
-   sensors/calibration
    sensors/bme280
    sensors/ens160
+   sensors/ltr390
    sensors/scd40
    sensors/veml7700
-   sensors/ltr390
 
 .. toctree::
    :caption: Hardware
@@ -77,7 +74,6 @@ Contents
    software/index
    software/blink
    software/basics
-   software/i2c-scanner
    software/sensor-test
    software/demo
 

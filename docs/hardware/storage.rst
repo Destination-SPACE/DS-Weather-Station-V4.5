@@ -16,4 +16,4 @@
 Storage
 =======
 
-Coming soon!
+The storage on the Destination Weather station is simply a microSD card slot to store recorded sensor data for further evalulation. There is also chip-detect functionality which allows the code to know if a card has been inserted or not.

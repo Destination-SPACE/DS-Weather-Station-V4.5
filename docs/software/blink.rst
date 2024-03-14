@@ -15,4 +15,4 @@
 
 Blink Sketch
 ============
-Coming soon!
+The `Blink <https://gitlab.com/Destination-SPACE/ds-weather-station-v4.5/-/blob/main/software/Blink/Blink.ino>`_ sketch is used as a beginners program and to test the on-board RGB LED and NeoPixel.

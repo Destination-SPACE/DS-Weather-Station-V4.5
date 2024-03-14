@@ -15,5 +15,4 @@
 
 Sensor Test Sketch
 ==================
-
-Coming soon!
+The `Sensor Test <https://gitlab.com/Destination-SPACE/ds-weather-station-v4.5/-/blob/main/software/Sensor_Test/Sensor_Test.ino>`_ sketch is used to make sure the sensors on the weather station are working correctly. Use this sketch as the first program to upload after the `Blink <https://gitlab.com/Destination-SPACE/ds-weather-station-v4.5/-/blob/main/software/Blink/Blink.ino>`_ sketch.

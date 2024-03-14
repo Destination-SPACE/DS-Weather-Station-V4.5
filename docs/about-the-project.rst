@@ -16,4 +16,4 @@
 About the Project
 =================
 
-Coming soon!
+Destination Weather Station is one of the latest versions of this platform initially designed durring the begining of the COVID-19 pandemic. It is capable of measuring and recording temperature, pressure, and humidity and also has a connector for additional environmental sensors. The Destination Weather Station v4.5 is powered by a Raspberry Pi RP2040 M1+ microcontroller which makes the weather station capable of measuring and recording data with no fuss.
