@@ -12,7 +12,7 @@ pages:
 
     - sphinx-build -b html docs/ _build/html
     - sphinx-build -M latex docs/ _build/
-    - sphinx-build -M latexpdf . /_build/
+    - sphinx-build -M latexpdf docs/ _build/
     - cp _build/*.pdf docs/pdf/
   artifacts:
     paths:
