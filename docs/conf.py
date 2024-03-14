@@ -34,3 +34,11 @@ copyright = '2024, Destination SPACE Inc.'
 html_show_sphinx = False
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
+
+latex_elements = {
+    'papersize': 'letterpaper',
+    'pointsize': '10pt',
+}
+
+# Paths
+latex_output = '_build/latex'

@@ -16,7 +16,6 @@ pages:
   artifacts:
     paths:
       - _build/html/
-      - _build/latex/
       - docs/pdf/
   only:
     - main
