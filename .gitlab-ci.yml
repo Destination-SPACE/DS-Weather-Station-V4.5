@@ -11,7 +11,7 @@ pages:
     - python -m pip install pdflatex
 
     - sphinx-build -b html docs/ public/
-    - sphinx-build -b latex docs/ docs/latex
+    - sphinx-build -M latexpdf
     - cd docs/latex && make
   artifacts:
     paths:
