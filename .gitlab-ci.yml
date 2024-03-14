@@ -12,8 +12,8 @@ pages:
 
     - sphinx-build -b html docs/ public
     - sphinx-build -M latex docs/ docs/latex
-    - make latexpdf docs/ docs/latex
-    - cp _build/*.pdf docs/pdf
+    - cd docs/latex
+    - make
   artifacts:
     paths:
       - public
