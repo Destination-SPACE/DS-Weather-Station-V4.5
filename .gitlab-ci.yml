@@ -11,21 +11,11 @@ pages:
     - python -m pip install pdflatex
 
     - sphinx-build -b html docs/ public/
-    - sphinx-build -b latex docs/ docs/latex
-    - cd docs/latex && make
+    #- sphinx-build -b latex docs/ docs/latex
+    #- cd docs/latex && make
   artifacts:
     paths:
       - public
-      - docs/latex/*.pdf
-  only:
-    - main
-
-latex:
-  stage: deploy
-  script:
-    - python -m pip install sphinx
-    - python -m pip install sphinx-rtd-theme
-    - python -m pip install pdflatex
-    - sphinx-build -d latex docs/ docs/pdf
+      #- docs/latex/*.pdf
   only:
     - main
