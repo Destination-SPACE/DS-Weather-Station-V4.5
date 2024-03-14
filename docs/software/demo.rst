@@ -15,4 +15,4 @@
 
 Demo Sketch
 ===========
-The `Demo <../../software/Demo/Demo.ino>`_ sketch is used as an introductory program to most of the features on the weather station. This includes scrollable menus for all sensors.
+The `Demo <https://gitlab.com/Destination-SPACE/ds-weather-station-v4.5/-/blob/main/software/Demo/Demo.ino>`_ sketch is used as an introductory program to most of the features on the weather station. This includes scrollable menus for all sensors.
