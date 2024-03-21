@@ -78,10 +78,8 @@ Contents
    activities/ALS
    activities/UVA
 
-Miscellaneous
--------------
-
 .. toctree::
+   :caption: Miscellaneous
    :maxdepth: 2
 
    FAQ <faq/index>
