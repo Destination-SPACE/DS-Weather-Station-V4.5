@@ -24,7 +24,8 @@ Getting Started
 ---------------
 
 .. toctree::
-   :maxdepth: 1
+   :caption: Getting Started
+   :maxdepth: 2
 
    hardware/the-kit
    hardware/assembly
@@ -33,7 +34,7 @@ Configuration
 -------------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    software/install-arduino-ide
 
@@ -41,7 +42,7 @@ Sensors
 -------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    sensors/index
    sensors/bme280
@@ -54,7 +55,7 @@ Hardware
 --------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    hardware/index
    faq/troubleshooting
@@ -66,7 +67,7 @@ Software
 --------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    software/index
    software/blink
@@ -78,7 +79,7 @@ Activities
 ----------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    activities/index
    activities/tempurature
@@ -92,7 +93,7 @@ Miscellaneous
 -------------
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
    FAQ <faq/index>
 
