@@ -74,6 +74,20 @@ Software
    software/demo
    software/full-code
 
+Activities
+----------
+
+.. toctree::
+   :maxdepth: 2
+
+   activities/index
+   activities/tempurature
+   activities/humidity
+   activities/CO2
+   activities/VOCs
+   activities/ALS
+   activities/UVA
+
 Miscellaneous
 -------------
 
