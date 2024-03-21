@@ -16,12 +16,11 @@ Destination Weather Station v4.5
 
 An Open Source Remote Sensing Platform for National Taiwan Normal University
 
+Contents
+--------
+
 .. image:: assets/front.png
       :target: index.html
-
-
-Getting Started
----------------
 
 .. toctree::
    :caption: Getting Started
@@ -30,18 +29,14 @@ Getting Started
    hardware/the-kit
    hardware/assembly
 
-Configuration
--------------
-
 .. toctree::
+   :caption: Configuration
    :maxdepth: 2
 
    software/install-arduino-ide
 
-Sensors
--------
-
 .. toctree::
+   :caption: Sensors
    :maxdepth: 2
 
    sensors/index
@@ -51,10 +46,8 @@ Sensors
    sensors/scd40
    sensors/veml7700
 
-Hardware
---------
-
 .. toctree::
+   :caption: Hardware
    :maxdepth: 2
 
    hardware/index
@@ -63,10 +56,8 @@ Hardware
    hardware/storage
    hardware/hid
 
-Software
---------
-
 .. toctree::
+   :caption: Software
    :maxdepth: 2
 
    software/index
@@ -75,10 +66,8 @@ Software
    software/demo
    software/full-code
 
-Activities
-----------
-
 .. toctree::
+   :caption: Activities
    :maxdepth: 2
 
    activities/index
