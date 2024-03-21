@@ -13,7 +13,7 @@
 
 .. _activities:
 
-Destination Weather Station Sensor Sensor Activities
-====================================================
+Overview of Sensor Activities
+=============================
 
 
