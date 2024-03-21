@@ -13,8 +13,8 @@
 
 .. _hardware:
 
-Destination Weather Station - Hardware
-======================================
+Overview of Hardware
+====================
 
 The Destination Weather Station was designed in `KiCad <https://www.kicad.org/>`_ and assembled by hand. the weather station includes several features that improve user experiance. These are:
 

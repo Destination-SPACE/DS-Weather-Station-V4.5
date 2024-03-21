@@ -13,8 +13,8 @@
 
 .. _sensors:
 
-Destination Weather Station - Sensors
-=====================================
+Overview of Sensors
+===================
 
 The Destination Weather Station is equipped with a :ref:`Bosch BME280 combined humidity and pressure sensor<bme280>`.
 

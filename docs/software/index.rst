@@ -13,8 +13,8 @@
 
 .. _software:
 
-Software
-========
+Overview of Software
+====================
 
 Software for the Destination Weather Station v4.5.
 
