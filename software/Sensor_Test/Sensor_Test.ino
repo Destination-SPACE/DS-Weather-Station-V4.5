@@ -31,7 +31,6 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 *******************************************************************************/
 
 //Import system libraries
-#include <iostream>
 #include <Wire.h>
 
 //Import sensor libraries
