@@ -79,6 +79,7 @@ The final step is to send the commands to the NeoPixel and RGB LED. This is done
    pixels.show();
 
 .. code-block:: cpp
+   
    setColor(15, 25, 205);
 
    void setColor(int VAL_GRN, int VAL_RED, int VAL_BLU){
@@ -93,6 +94,7 @@ Full Code
 Below is the full Blink example sketch
 
 .. code-block:: cpp
+   
    #include <Adafruit_NeoPixel.h> // Import Adafruit NeoPixel library
 
    //Define Hardware
