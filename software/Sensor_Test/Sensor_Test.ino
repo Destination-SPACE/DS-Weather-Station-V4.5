@@ -5,7 +5,7 @@ This is an example sketch for the Destination Weather Station v4.5 remote
 sensing platform to test the BME280 humidity, pressue, & temperature sensor as
 well as the other classroom kit sensors.
 
-modified 2024-03-13
+modified 2024-03-26
 by Madison Gleydura
 
 MIT LICENSE AGREEMENT
