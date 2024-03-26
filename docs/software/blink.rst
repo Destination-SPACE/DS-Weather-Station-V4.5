@@ -88,7 +88,9 @@ The final step is to send the commands to the NeoPixel and RGB LED. This is done
    }
 
 Full Code
----------
+--------- 
+
+Below is the full Blink example sketch
 
 .. code-block:: cpp
    #include <Adafruit_NeoPixel.h> // Import Adafruit NeoPixel library
