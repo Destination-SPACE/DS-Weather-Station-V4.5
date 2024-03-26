@@ -21,11 +21,11 @@ The `Blink <https://gitlab.com/Destination-SPACE/ds-weather-station-v4.5/-/blob/
 Libraries
 ---------
 
+The Blink Sketch has only one required library. This library is the `Adafruit NeoPixel Library <https://github.com/adafruit/Adafruit_NeoPixel>`_. This is used to send commands to the NeoPixel RGB LED on the Seeeduino XIAO.
+
 .. code-block:: cpp
    
    #include <Adafruit_NeoPixel.h>
-
-The Blink Sketch has only one required library. This library is the `Adafruit NeoPixel Library <https://github.com/adafruit/Adafruit_NeoPixel>`_. This is used to send commands to the NeoPixel RGB LED on the Seeeduino XIAO.
 
 Hardware Definitions
 --------------------
