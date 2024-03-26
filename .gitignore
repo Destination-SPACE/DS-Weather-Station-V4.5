@@ -20,3 +20,4 @@ fp-info-cache
 *.dsn
 *.ses
 *.xml
+*.vscode
