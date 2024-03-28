@@ -16,7 +16,7 @@
 Overview of Hardware
 ====================
 
-The Destination Weather Station was designed in `KiCad <https://www.kicad.org/>`_ and assembled by hand. the weather station includes several features that improve user experiance. These are:
+The Destination Weather Station was designed in `KiCad <https://www.kicad.org/>`_ and assembled by hand. the weather station includes several features that improve user experience. These are:
 
 .. toctree::
    :maxdepth: 1
