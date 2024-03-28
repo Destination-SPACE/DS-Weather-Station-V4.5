@@ -13,5 +13,19 @@
 
 .. _humidity:
 
-Humidity Sensor Activity
-========================
+Humidity Sensor Activity (10 minutes)
+=====================================
+
+Description
+
+Background
+----------
+
+Materials
+---------
+
+Procedure
+---------
+
+Discussion Questions
+--------------------

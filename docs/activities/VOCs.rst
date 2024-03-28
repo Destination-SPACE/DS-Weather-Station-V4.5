@@ -13,5 +13,19 @@
 
 .. _vocs:
 
-Volitile Organic Compounds Sensor Activity
-==========================================
+Volatile Organic Compounds Sensor Activity (10 minutes)
+=======================================================
+
+Description
+
+Background
+----------
+
+Materials
+---------
+
+Procedure
+---------
+
+Discussion Questions
+--------------------

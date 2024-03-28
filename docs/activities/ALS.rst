@@ -13,5 +13,19 @@
 
 .. _als:
 
-Ambient Light Sensor Activity
-=============================
+Ambient Light Sensor Activity (10 minutes)
+==========================================
+
+Description
+
+Background
+----------
+
+Materials
+---------
+
+Procedure
+---------
+
+Discussion Questions
+--------------------

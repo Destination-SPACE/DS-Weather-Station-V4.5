@@ -13,5 +13,19 @@
 
 .. _uva:
 
-Ultraviolt Light Sensor Activity
-================================
+Ultraviolt Light Sensor Activity (10 minutes)
+=============================================
+
+Description
+
+Background
+----------
+
+Materials
+---------
+
+Procedure
+---------
+
+Discussion Questions
+--------------------

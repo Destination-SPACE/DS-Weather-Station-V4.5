@@ -13,5 +13,19 @@
 
 .. _co2:
 
-Carbon-Dioxide Sensor Activity
-==============================
+Carbon-Dioxide Sensor Activity (10 minutes)
+===========================================
+
+Description
+
+Background
+----------
+
+Materials
+---------
+
+Procedure
+---------
+
+Discussion Questions
+--------------------

@@ -13,5 +13,19 @@
 
 .. _temperature:
 
-Temperature Sensor Activity
-===========================
+Temperature Sensor Activity (10 minutes)
+========================================
+
+Description
+
+Background
+----------
+
+Materials
+---------
+
+Procedure
+---------
+
+Discussion Questions
+--------------------
