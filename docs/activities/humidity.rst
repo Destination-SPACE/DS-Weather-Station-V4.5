@@ -13,10 +13,10 @@
 
 .. _humidity:
 
-Humidity Sensor Activity (10 minutes)
-=====================================
+Humidity Sensor Activity
+========================
 
-Description
+Duration: 10 minutes
 
 Background
 ----------

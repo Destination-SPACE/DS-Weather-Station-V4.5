@@ -13,10 +13,10 @@
 
 .. _vocs:
 
-Volatile Organic Compounds Sensor Activity (10 minutes)
-=======================================================
+Volatile Organic Compounds Sensor Activity
+==========================================
 
-Description
+Duration: 10 minutes
 
 Background
 ----------

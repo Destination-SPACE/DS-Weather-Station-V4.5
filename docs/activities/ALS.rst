@@ -13,10 +13,10 @@
 
 .. _als:
 
-Ambient Light Sensor Activity (10 minutes)
-==========================================
+Ambient Light Sensor Activity
+=============================
 
-Description
+Duration: 10 minutes
 
 Background
 ----------

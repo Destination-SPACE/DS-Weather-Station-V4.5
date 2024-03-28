@@ -13,10 +13,10 @@
 
 .. _temperature:
 
-Temperature Sensor Activity (10 minutes)
-========================================
+Temperature Sensor Activity
+===========================
 
-Description
+Duration: 10 minutes
 
 Background
 ----------

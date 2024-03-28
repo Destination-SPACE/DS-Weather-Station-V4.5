@@ -13,10 +13,10 @@
 
 .. _uva:
 
-Ultraviolt Light Sensor Activity (10 minutes)
-=============================================
+Ultraviolet Light Sensor Activity
+=================================
 
-Description
+Duration: 10 minutes
 
 Background
 ----------
