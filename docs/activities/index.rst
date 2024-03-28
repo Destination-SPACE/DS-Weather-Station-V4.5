@@ -21,9 +21,9 @@ Each activity should take approximately 10 minutes to complete.
 .. toctree::
    :maxdepth: 1
 
-   1. temperature
-   2. humidity
-   3. CO2
-   4. VOCs
-   5. UVA
-   6. ALS
+   temperature
+   humidity
+   CO2
+   VOCs
+   UVA
+   ALS
