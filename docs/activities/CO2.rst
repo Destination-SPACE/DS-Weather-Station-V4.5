@@ -13,7 +13,7 @@
 
 .. _co2:
 
-Carbon-Dioxide Sensor Activity
+Carbon-Dioxide Activity - 
 ==============================
 
 Duration: 10 minutes

@@ -13,8 +13,8 @@
 
 .. _humidity:
 
-Humidity Sensor Activity
-========================
+Humidity Activity - Relative vs Absolute
+========================================
 
 Duration: 10 minutes
 

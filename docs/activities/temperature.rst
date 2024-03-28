@@ -13,8 +13,8 @@
 
 .. _temperature:
 
-Temperature Sensor Activity
-===========================
+Temperature Activity - Microclimates
+====================================
 
 Duration: 10 minutes
 
