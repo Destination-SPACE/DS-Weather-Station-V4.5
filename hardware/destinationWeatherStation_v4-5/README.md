@@ -2,7 +2,7 @@
 KiCad files for Destination Weather Station v4.5
 
 ## KiCanvas
-View schematic and PCB files with [KiCanvas](https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2FDestination-SPACE%2FDS-Weather-Station-V4_5%2Ftree%2Fmain%2Fhardware)
+View schematic and PCB files with [KiCanvas](https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2FDestination-SPACE%2FDS-Weather-Station-V4_5%2Ftree%2Fmain%2Fhardware%2FdestinationWeatherStation_v4-5)
 
 ## Directory
 ### [🧾 Bill of Materials](bom/bom.md)
