@@ -13,10 +13,10 @@
 
 .. _vocs:
 
-Volatile Organic Compounds Sensor Activity
-==========================================
+Volatile Organic Compounds Activity - Methane / Ethane TBD
+==========================================================
 
-Duration: 10 minutes
+Duration: 15 minutes
 
 Background
 ----------

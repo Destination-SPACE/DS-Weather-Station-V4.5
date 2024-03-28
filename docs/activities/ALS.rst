@@ -13,13 +13,14 @@
 
 .. _als:
 
-Ambient Light Sensor Activity
+Ambient Light Activity - Light abortion related to Albedo and climate
 =============================
 
-Duration: 10 minutes
+Duration: 15 minutes
 
 Background
 ----------
+intensity to luminous flux to radiant flux. 
 
 Materials
 ---------

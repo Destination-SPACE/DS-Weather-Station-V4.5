@@ -13,10 +13,10 @@
 
 .. _co2:
 
-Carbon-Dioxide Activity - 
-==============================
+Carbon-Dioxide Activity - Photosynthesis
+========================================
 
-Duration: 10 minutes
+Duration: 15 minutes
 
 Background
 ----------

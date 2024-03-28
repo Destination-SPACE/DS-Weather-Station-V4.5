@@ -16,13 +16,16 @@
 Humidity Activity - Relative vs Absolute
 ========================================
 
-Duration: 10 minutes
+Duration: 15 minutes
 
 Background
 ----------
 
 Materials
 ---------
+
+- Destination Weather Station
+- Humidifier
 
 Procedure
 ---------

@@ -16,16 +16,30 @@
 Temperature Activity - Microclimates
 ====================================
 
-Duration: 10 minutes
+Duration: 15 minutes
 
 Background
 ----------
 
+
+
 Materials
 ---------
+
+- Destination Weather Station
+- Paper
+- Pencil
 
 Procedure
 ---------
 
+1. Make a map of the classroom on a sheet of paper. Make sure to label any windows, doors, air vents, and significant heat sources.
+2. Make a prediction for which areas of the classroom you think will be hot or cold.
+3. On your map, mark locations in the classroom you want to collect data.
+4. Using your weather station, record the average temperature at each location you marked on your map.
+
 Discussion Questions
 --------------------
+
+1. Did your predictions match the data you collected? Why might they be different?
+2. What do you think caused that part of the classroom to be that temperature?

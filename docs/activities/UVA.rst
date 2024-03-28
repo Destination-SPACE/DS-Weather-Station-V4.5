@@ -13,13 +13,15 @@
 
 .. _uva:
 
-Ultraviolet Light Sensor Activity
-=================================
+Ultraviolet Light Activity - Material Adsorption
+================================================
 
-Duration: 10 minutes
+Duration: 15 minutes
 
 Background
 ----------
+
+
 
 Materials
 ---------

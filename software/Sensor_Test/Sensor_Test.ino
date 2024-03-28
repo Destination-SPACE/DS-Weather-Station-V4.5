@@ -2,7 +2,7 @@
 DESTINATION WEATHER STATION V4.5 EXAMPLE - SENSOR TEST
 
 This is an example sketch for the Destination Weather Station v4.5 remote
-sensing platform to test the BME280 humidity, pressue, & temperature sensor as
+sensing platform to test the BME280 humidity, pressure, & temperature sensor as
 well as the other classroom kit sensors.
 
 modified 2024-03-26
