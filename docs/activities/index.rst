@@ -16,4 +16,11 @@
 Overview of Sensor Activities
 =============================
 
+Each activity should take approximately 10 minutes to complete.
 
+1. :ref:`Temperature Activity<temperature>`
+2. :ref:`Relative Humidity Activity<humidity>`
+3. :ref:`Carbon-Dioxide Activity<CO2>`
+4. :ref:`Volatile Organic Compounds Activity<VOCs>`
+5. :ref:`Ultra-Violet Activity<UVA>`
+6. :ref:`Ambient Light Activity<ALS>`
