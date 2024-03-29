@@ -14,7 +14,9 @@
 .. _als:
 
 Ambient Light Activity - Light abortion related to Albedo and climate
-=============================
+=====================================================================
+
+Reflect light from lamp off of paper and measure reflected light. white paper vs brown? dirt? idk.
 
 Duration: 15 minutes
 

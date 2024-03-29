@@ -16,6 +16,8 @@
 Volatile Organic Compounds Activity - Methane / Ethane TBD
 ==========================================================
 
+measure VOCs. relate to IRL VOC measurements.
+
 Duration: 15 minutes
 
 Background

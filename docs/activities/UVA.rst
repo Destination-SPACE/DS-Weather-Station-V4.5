@@ -16,6 +16,8 @@
 Ultraviolet Light Activity - Material Adsorption
 ================================================
 
+Measure how much UV passes through different materials like glass, tinted glass, plexiglass, whatever.
+
 Duration: 15 minutes
 
 Background

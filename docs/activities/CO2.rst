@@ -16,13 +16,17 @@
 Carbon-Dioxide Activity - Photosynthesis
 ========================================
 
+plant in bag. measure CO2 inside bag and outside bag.
+
 Duration: 15 minutes
 
 Background
 ----------
 
+
 Materials
 ---------
+plant
 
 Procedure
 ---------

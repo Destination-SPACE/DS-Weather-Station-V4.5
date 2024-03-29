@@ -16,6 +16,8 @@
 Humidity Activity - Relative vs Absolute
 ========================================
 
+measure humidity, idk.
+
 Duration: 15 minutes
 
 Background
