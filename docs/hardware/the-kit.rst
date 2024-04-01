@@ -20,10 +20,11 @@ What is in the Kit?
 
 Kit Contents
 ------------
-- Destination Weather Station v4.5.2 
+- Destination Weather Station v4.5.2
 - Seeeduino XIAO RP2040 microcontroller w/ headers
 - 128x64px OLED display w/ headers
 - SPDT power switch
 - AAA battery case
 - 8GB micro-SD card
 - USB-A to USB-C cable
+- USB microSD card adapter
