@@ -1,6 +1,6 @@
 <div align="center">
     <img src="docs/assets/Destination Space Logo.png" width="200" height="auto"/>
-    <h1>Destination Weather Station v4.5.1</h1>
+    <h1>Destination Weather Station v4.5.2</h1>
     <p>An Open Source Remote Sensing Platform for National Taiwan Normal University 🇹🇼</p>
 </div>
 
