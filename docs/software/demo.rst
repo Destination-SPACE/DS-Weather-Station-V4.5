@@ -17,3 +17,12 @@ Demo Sketch
 ===========
 
 The `Demo <https://gitlab.com/Destination-SPACE/ds-weather-station-v4.5/-/blob/main/software/Demo/Demo.ino>`_ sketch is used as an introductory program to most of the features on the weather station. This includes scrollable menus for all sensors.
+
+There is no data recording in this example.
+
+Button Menu
+-----------
+
+On the weather station there are 4 buttons, ↑, ↓, ←, →.
+
+The ← and → buttons are used to scroll between the weather menu, air quality menu, and the light menu.

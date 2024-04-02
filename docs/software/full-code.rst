@@ -20,3 +20,14 @@ The `Full Code <https://gitlab.com/Destination-SPACE/ds-weather-station-v4.5/-/b
 
 Program Overview
 ----------------
+
+Button Menu
+-----------
+
+On the weather station there are 4 buttons, ↑, ↓, ←, →.
+
+The ← and → buttons are used to scroll between the weather menu, air quality menu, and the light menu.
+
+The ↑ arrow is used to navigate to the data recording menu. Here you can choose to either start recording data or pause data recording. **data recording is paused by default**. Press the → button to confirm your selection.
+
+The ↓ is used to navigate the data recording menu above. When in either the air quality or light menu, pressing it will return you to the weather menu.
