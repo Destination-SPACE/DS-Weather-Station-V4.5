@@ -172,6 +172,7 @@ Loop Function
 The loop function is the main portion of the software where the data is collected and displayed. First, the variable for the delay_timer is set to be equal to the current processor clock time (in milliseconds). This is to help the code make sure it is refreshing at the correct rate.
 
 .. code-block:: cpp
+   
    int delay_timer = millis();
 
 The next step is to read from all the individual sensors and preform any relevant calculations. Again, each sensor has it's own method to collect data.
@@ -182,6 +183,7 @@ BME280
 The Adafruit library for the BME280 makes it simple to collect data. It is a simple read function where you define the target variable and assign the data value to it.
 
 .. code-block:: cpp
+
    BME280_TEMP = BME280.readTemperature();
    BME280_PRES = BME280.readPressure() / 100.0F;
    BME280_HUMD = BME280.readHumidity();
@@ -201,6 +203,7 @@ Where T is temperature in Fahrenheit and RH is relative humidity.
 Because this is a regression fit, the equation has an error of ±1.3°F.
 
 .. code-block:: cpp
+
    float h = (log10(BME280_HUMD)-2.0)/0.4343+(17.62*BME280_TEMP)/(243.12+BME280_TEMP);
   
    //Uncomment to calculate dew point and absolute humidity
@@ -230,6 +233,7 @@ ENS160
 The data collecting method for the ENS160 is very similar to the BME280. The parameters being collected are Air Quality Index (AQI) calculated from the German Federal Environmental Agency model, which is on a scale from 1 - 5, total volatile organic compounds (TVOC), and a calculated measurement of approximate Carbon-Dioxide concentration (eCO2).
 
 .. code-block:: cpp
+
    ENS160.measure(true);
    ENS160_AQI = ENS160.getAQI();
    ENS160_TVOC = ENS160.getTVOC();
@@ -243,6 +247,7 @@ LTR390
 Just like before, only the data needs to be pulled from the sensor with minimal calculations.
 
 .. code-block:: cpp
+
    LTR390_RAW = LTR390.readUVS();
    LTR390_UVI = LTR390_RAW / 2300.00;
 
@@ -250,12 +255,14 @@ VEML7700
 ^^^^^^^^
 
 .. code-block:: cpp
+
    VEML7700_LUX = VEML7700.readLux();
 
 SCD40
 ^^^^^
 
 .. code-block:: cpp
+
    bool isDataReady = false; // Reset Data-Ready flag
    if(scd4x.getDataReadyFlag(isDataReady)){
    }
@@ -278,6 +285,7 @@ Full Code
 Below is the full Sensor Test example sketch
 
 .. code-block:: cpp
+
    //Import system libraries
    #include <Wire.h>
 
