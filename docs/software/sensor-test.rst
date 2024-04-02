@@ -193,7 +193,7 @@ Heat index is calculated using `dry-bulb temperature <https://en.wikipedia.org/w
 
 .. math:: HI = -42.379 + 2.04901523*T + 10.14333127*RH - 0.22375541*T*RH - 6.83783*10^(-3)*T^2 - 5.481717*10^(-2)*RH^2 + 1.22874*10^(-3)*T^2*RH + 8.5282*10*(-4)*T*RH^2 - 1.99*10^(-6)*T^2*RH^2
    :label: Heat-index equation
-   :wrap:
+   :nowrap:
 
 Where T is temperature in Fahrenheit and RH is relative humidity.
 
