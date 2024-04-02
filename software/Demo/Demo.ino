@@ -89,15 +89,15 @@ void setup() {
 
   //Initialize BME280 sensor
   if(!BME280.begin(0x76, &Wire)){
-    BME280_STS = 0;
     Serial.print("\n\nBME280 not found");
+    BME280_STS = 0;
   }
 
   //Initialize ENS160 sensor
   if(ENS160.begin()){
     if(!ENS160.setMode(ENS160_OPMODE_STD)){
-      ENS160_STS = 0;
       Serial.print("\n\nENS160 failed to init");
+      ENS160_STS = 0;
     }
     delay(10);
     if(ENS160.available()){
@@ -106,14 +106,14 @@ void setup() {
     }
   }
   else{
-    ENS160_STS = 0;
     Serial.print("\n\nENS160 not found");
+    ENS160_STS = 0;
   }
 
   //Initialize LTR390 sensor
   if(!LTR390.begin()){
-    LTR390_STS = 0;
     Serial.print("\n\nLTR390 not found");
+    LTR390_STS = 0;
   }
   else{
     LTR390.setMode(LTR390_MODE_UVS);
@@ -125,8 +125,8 @@ void setup() {
 
   //Initialize VEML7700 sensor
   if(!VEML7700.begin()){
-    VEML7700_STS = 0;
     Serial.print("\n\nVEML7700 not found");
+    VEML7700_STS = 0;
   }
   else{
     VEML7700.setLowThreshold(10000);
@@ -137,8 +137,8 @@ void setup() {
   //Initialize SCD40 sensor
   scd4x.begin(Wire);
   if(scd4x.stopPeriodicMeasurement() || scd4x.startPeriodicMeasurement()){
-    SCD40_STS = 0;
     Serial.print("\n\nSCD40 failed to respond");
+    SCD40_STS = 0;
   }
 
   //Initialize OLED display
@@ -158,7 +158,7 @@ void setup() {
   digitalWrite(NEOPIXEL_PWR, HIGH);
 
   //Print data table header
-  Serial.print("+==============================================================================+\n|  TIME  | TEMP | HUM |  HI  | PRES | ALT | CO2 | TVOC |  AQI  |  UVI  |  LUX  |\n|hh:mm:ss| (°C) | (%) | (°C) | hPa  | (m) |(ppm)|(ppb.)|(0-300)|(0-+11)|(k-lux)|\n+==============================================================================+");
+  Serial.print("\n\n+==============================================================================+\n|  TIME  | TEMP | HUM |  HI  | PRES | ALT | CO2 | TVOC |  AQI  |  UVI  |  LUX  |\n|hh:mm:ss| (°C) | (%) | (°C) | hPa  | (m) |(ppm)|(ppb.)|(0-300)|(0-+11)|(k-lux)|\n+==============================================================================+");
   
   //Set timer variables to zero
   clock_timer = 0;
@@ -211,7 +211,7 @@ void loop() {
   }
   
   // Retrieve data from ENS160 VOC sensor
-  if(ENS160.available() && ENS160_STS){
+  if(ENS160_STS && ENS160.available()){
     ENS160.measure(true);
     ENS160_AQI = ENS160.getAQI(); // Get air quality index
     ENS160_TVOC = ENS160.getTVOC(); // Get total volitle organic compond concentration in parts per billion
@@ -223,14 +223,9 @@ void loop() {
     ENS160_AQI = alpha*TVOC_CONSENTRATION + (1-alpha)*ENS160_AQI_PREV; // Calculated from NowCast EPA algorithm
     ENS160_AQI_PREV = ENS160_AQI;
   }
-  else{
-    ENS160_AQI = 0;
-    ENS160_TVOC = 0;
-    ENS160_eCO2 = 0;
-  }
 
   //Retrieve data from LTR390 UVA sensor
-  if(LTR390.newDataAvailable() && LTR390_STS){
+  if(LTR390_STS && LTR390.newDataAvailable()){
     LTR390_RAW = LTR390.readUVS();
     LTR390_UVI = LTR390_RAW / 2300.00; // Calculate UV-index from raw values
   }
@@ -247,23 +242,22 @@ void loop() {
   }
 
   //Retrieve data from SCD40 CO2 sensor
-  bool isDataReady = false; // Reset Data-Ready flag
-  if(scd4x.getDataReadyFlag(isDataReady)){ // Check if there is data available to read
-  }
+  if(SCD40_STS){
+    bool isDataReady = false; // Reset Data-Ready flag
+    if(scd4x.getDataReadyFlag(isDataReady)){ // Check if there is data available to read
+    }
 
-  if(isDataReady){ // If data is ready to be read, read data
-    if(scd4x.readMeasurement(SCD40_CO2_RAW, SCD40_TEMP, SCD40_HUMD)){
+    if(isDataReady){ // If data is ready to be read, read data
+      if(scd4x.readMeasurement(SCD40_CO2_RAW, SCD40_TEMP, SCD40_HUMD)){
+      }
+      else if(SCD40_CO2_RAW == 0){ // If CO2 data is zero, keep data
+      } 
+      else{
+        SCD40_CO2 = static_cast<float>(SCD40_CO2_RAW); // Cast CO2 unsigned 16bit-integer to type float
+      }
     }
-    else if(SCD40_CO2_RAW == 0){ // If CO2 data is zero, keep data
-    } 
-    else{
-      SCD40_CO2 = static_cast<float>(SCD40_CO2_RAW); // Cast CO2 unsigned 16bit-integer to type float
+    else{ // If data is not ready, skip measurment
     }
-  }
-  else if(!SCD40_STS){
-    SCD40_CO2 = 0;
-  }
-  else{ // If data is not ready, skip measurment
   }
   
   //Clock timer
@@ -300,9 +294,8 @@ void loop() {
       display.clearDisplay();
       display.setCursor(0,0);   display.print("Air Quality Menu");
       display.setCursor(0,20);  display.print("CO2: ");          display.print(SCD40_CO2, 0);    display.print("ppm");
-      display.setCursor(0,30);  display.print("eCO2: ");         display.print(ENS160_eCO2, 0);  display.print("ppm");
-      display.setCursor(0,40);  display.print("TVOC: ");         display.print(BME280_HUMD, 2);  display.print("ppb");
-      display.setCursor(0,50);  display.print("AQI: ");           display.print(BME280_HI, 2);
+      display.setCursor(0,30);  display.print("TVOC: ");         display.print(ENS160_TVOC, 0);  display.print("ppb");
+      display.setCursor(0,40);  display.print("AQI: ");         display.print(ENS160_AQI, 2);
       display.display();
       break;
 
