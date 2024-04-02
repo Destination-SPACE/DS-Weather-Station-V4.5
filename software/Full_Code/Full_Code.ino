@@ -200,11 +200,11 @@ void setup() {
   if(!file.open(fileName, O_WRONLY | O_CREAT | O_EXCL)){
     Serial.print("\n\nError opening file");
   }
-  file.println(F("Time (s),Temp (C),Hum (%),HI (C),PRES (hPa),ALT (m),CO2 (ppm),TVOC (ppb),AQI (0-300),UVI (0-11),LUX (k-lux)"));
+  file.println(F("Time (s),Temp (C),Hum (%),HI (C),PRES (hPa),ALT (m),CO2 (ppm),TVOC (ppb),AQI (1-5),UVI (0-11),LUX (k-lux)"));
 
 
   //Print data table header
-  Serial.print("\n\n+==============================================================================+\n|  TIME  | TEMP | HUM |  HI  | PRES | ALT | CO2 | TVOC |  AQI  |  UVI  |  LUX  |\n|hh:mm:ss| (°C) | (%) | (°C) | hPa  | (m) |(ppm)|(ppb.)|(0-300)|(0-+11)|(k-lux)|\n+==============================================================================+");
+  Serial.print("\n\n+==============================================================================+\n|  TIME  | TEMP | HUM |  HI  | PRES | ALT | CO2 | TVOC |  AQI  |  UVI  |  LUX  |\n|hh:mm:ss| (°C) | (%) | (°C) | hPa  | (m) |(ppm)|(ppb.)| (1-5) |(0-+11)|(k-lux)|\n+==============================================================================+");
   
   //Set timer variables to zero
   clock_timer = 0;
@@ -263,12 +263,6 @@ void loop() {
     ENS160_AQI = ENS160.getAQI(); // Get air quality index
     ENS160_TVOC = ENS160.getTVOC(); // Get total volitle organic compond concentration in parts per billion
     ENS160_eCO2 = ENS160.geteCO2(); // Get eCO2 measurment, derived from TVOC
-    
-    //Calculate better AQI based off of the Environmental Protection Agency
-    float TVOC_CONSENTRATION = ENS160_TVOC*(29/24.45); // ug/m^3
-    float alpha = 0.5; // Weight factor
-    ENS160_AQI = alpha*TVOC_CONSENTRATION + (1-alpha)*ENS160_AQI_PREV; // Calculated from NowCast EPA algorithm
-    ENS160_AQI_PREV = ENS160_AQI;
   }
   else{
     ENS160_AQI = 0;
@@ -330,7 +324,7 @@ void loop() {
 
   //Print data to serial monitor
   char buffer[1024]; // Create 1024bit buffer for data output
-  sprintf(buffer, "\n|%02d:%02d:%02d| %5.2f|%5.2f| %5.2f|%6.1f|%5.1f| %4.0f| %5.0f|  %5.1f|  %5.2f|%7.2f|", hh, mm, ss, BME280_TEMP, BME280_HUMD, BME280_HI, BME280_PRES, BME280_ALT, SCD40_CO2, ENS160_TVOC, ENS160_AQI, LTR390_UVI, VEML7700_LUX);
+  sprintf(buffer, "\n|%02d:%02d:%02d| %5.2f|%5.2f| %5.2f|%6.1f|%5.1f| %4.0f| %5.0f|  %5.0f|  %5.2f|%7.2f|", hh, mm, ss, BME280_TEMP, BME280_HUMD, BME280_HI, BME280_PRES, BME280_ALT, SCD40_CO2, ENS160_TVOC, ENS160_AQI, LTR390_UVI, VEML7700_LUX);
   Serial.print(buffer); // Print buffer
 
   //Print data to OLED display
@@ -362,7 +356,7 @@ void loop() {
       display.setCursor(0,0);   display.print("Air Quality Menu");
       display.setCursor(0,20);  display.print("CO2: ");          display.print(SCD40_CO2, 0);    display.print("ppm");
       display.setCursor(0,30);  display.print("TVOC: ");         display.print(ENS160_TVOC, 0);  display.print("ppb");
-      display.setCursor(0,40);  display.print("AQI: ");         display.print(ENS160_AQI, 2);
+      display.setCursor(0,40);  display.print("AQI: ");         display.print(ENS160_AQI, 0);
       display.display();
       break;
 
@@ -460,7 +454,7 @@ void loop() {
   //Write data to the SD card
   if(logging){
     char FILE_BUFFER[1024];
-    sprintf(FILE_BUFFER, "%02d:%02d:%02d,%5.2f,%5.2f,%5.2f,%6.1f,%5.1f,%4.0f,%5.0f,%5.1f,%5.2f,%7.2f", hh, mm, ss, BME280_TEMP, BME280_HUMD, BME280_HI, BME280_PRES, BME280_ALT, SCD40_CO2, ENS160_TVOC, ENS160_AQI, LTR390_UVI, VEML7700_LUX);
+    sprintf(FILE_BUFFER, "%02d:%02d:%02d,%5.2f,%5.2f,%5.2f,%6.1f,%5.1f,%4.0f,%5.0f,%5.0f,%5.2f,%7.2f", hh, mm, ss, BME280_TEMP, BME280_HUMD, BME280_HI, BME280_PRES, BME280_ALT, SCD40_CO2, ENS160_TVOC, ENS160_AQI, LTR390_UVI, VEML7700_LUX);
     delay(50);
     file.println(FILE_BUFFER);
     if(!file.sync() || file.getWriteError()){
