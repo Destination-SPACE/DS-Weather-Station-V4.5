@@ -59,6 +59,9 @@ bool SCD40_STS = 1;
 int clock_timer, hh, mm, ss;
 uint16_t SCD40_CO2_RAW;
 
+float TVOC_CONCENTRATION_MIN = 5000;
+float TVOC_CONCENTRATION_MAX = 0;
+
 void setup() {
   Serial.begin(115200); // Set serial stream to 115200bits/s
   while(!Serial); // Wait until serial monitor is open
@@ -117,7 +120,7 @@ void setup() {
   }
 
   //Print data table header
-  Serial.print("\n\n+==============================================================================+\n|  TIME  | TEMP | HUM |  HI  | PRES | ALT | CO2 | TVOC |  AQI  |  UVI  |  LUX  |\n|hh:mm:ss| (°C) | (%) | (°C) | hPa  | (m) |(ppm)|(ppb.)|(0-300)|(0-+11)|(k-lux)|\n+==============================================================================+");
+  Serial.print("\n\n+==============================================================================+\n|  TIME  | TEMP | HUM |  HI  | PRES | ALT | CO2 | TVOC |  AQI  |  UVI  |  LUX  |\n|hh:mm:ss| (°C) | (%) | (°C) | hPa  | (m) |(ppm)|(ppb.)| (1-5) |(0-+11)|(k-lux)|\n+==============================================================================+");
   
   //Set timer variables to zero
   clock_timer = 0;
@@ -164,12 +167,6 @@ void loop() {
     ENS160_AQI = ENS160.getAQI(); // Get air quality index
     ENS160_TVOC = ENS160.getTVOC(); // Get total volatile organic compound concentration in parts per billion
     ENS160_eCO2 = ENS160.geteCO2(); // Get eCO2 measurement, derived from TVOC
-    
-    //Calculate better AQI based off of the Environmental Protection Agency
-    float TVOC_CONCENTRATION = ENS160_TVOC*(29/24.45); // ug/m^3
-    float alpha = 0.5; // Weight factor
-    ENS160_AQI = alpha*TVOC_CONCENTRATION + (1-alpha)*ENS160_AQI_PREV; // Calculated from NowCast EPA algorithm
-    ENS160_AQI_PREV = ENS160_AQI;
   }
   else{
     ENS160_AQI = 0;
@@ -229,7 +226,7 @@ void loop() {
   }
 
   char buffer[1024]; // Create 1024-bit buffer for data output
-  sprintf(buffer, "\n|%02d:%02d:%02d| %5.2f|%5.2f| %5.2f|%6.1f|%5.1f| %4.0f| %5.0f|  %5.1f|  %5.2f|%7.2f|", hh, mm, ss, BME280_TEMP, BME280_HUMD, BME280_HI, BME280_PRES, BME280_ALT, SCD40_CO2, ENS160_TVOC, ENS160_AQI, LTR390_UVI, VEML7700_LUX);
+  sprintf(buffer, "\n|%02d:%02d:%02d| %5.2f|%5.2f| %5.2f|%6.1f|%5.1f| %4.0f| %5.0f|  %5.0f|  %5.2f|%7.2f|", hh, mm, ss, BME280_TEMP, BME280_HUMD, BME280_HI, BME280_PRES, BME280_ALT, SCD40_CO2, ENS160_TVOC, ENS160_AQI, LTR390_UVI, VEML7700_LUX);
   Serial.print(buffer); // Print buffer
   
   //Idle until it is time for next data read
