@@ -3,5 +3,8 @@
         "GPIO",
         "Seeeduino",
         "XIAO"
-    ]
+    ],
+    "files.associations": {
+        "cmath": "cpp"
+    }
 }
