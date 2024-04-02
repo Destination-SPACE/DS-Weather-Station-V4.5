@@ -189,13 +189,16 @@ The Adafruit library for the BME280 makes it simple to collect data. It is a sim
 
 Now, the data can be interpreted to get the desired weather parameters. With the BME280 weather sensor several parameters can be calculated. The ones featured in this program are `dew point <https://en.wikipedia.org/wiki/Dew_point>`_, `absolute humidity <https://en.wikipedia.org/wiki/Humidity>`_, and `heat index <https://en.wikipedia.org/wiki/Heat_index>`_. Only the calculation for heat index is active by default, but you can uncomment the dew point and absolute humidity calculations to include them. 
 
-Heat index is calculated using `dry-bulb temperature <https://en.wikipedia.org/wiki/Dry-bulb_temperature>`_ and relative humidity. The formula used to calculate heat index was first derived in `The Assessment of Sultriness. Part I: A Temperature-Humidity Index Based on Human Physiology and Clothing Science <https://journals.ametsoc.org/view/journals/apme/18/7/1520-0450_1979_018_0861_taospi_2_0_co_2.xml>`_ by R.G. Steadman in 1979. His results were then interpreted by the National Weather Service in 1990 to be approximated into an equation.
+Heat index is calculated using `dry-bulb temperature <https://en.wikipedia.org/wiki/Dry-bulb_temperature>`_ and relative humidity. The formula used to calculate heat index was first derived in `The Assessment of Sultriness. Part I: A Temperature-Humidity Index Based on Human Physiology and Clothing Science <https://journals.ametsoc.org/view/journals/apme/18/7/1520-0450_1979_018_0861_taospi_2_0_co_2.xml>`_ by R.G. Steadman in 1979. His results were then interpreted by the National Weather Service in technical report `SR 90-23 <https://www.weather.gov/media/ffc/ta_htindx.PDF>`_ in 1990 to be approximated into an equation.
 
 .. math:: HI = -42.379 + 2.04901523*T + 10.14333127*RH - 0.22375541*T*RH - 6.83783*10^(-3)*T^2 - 5.481717*10^(-2)*RH^2 + 1.22874*10^(-3)*T^2*RH + 8.5282*10*(-4)*T*RH^2 - 1.99*10^(-6)*T^2*RH^2
    :label: Heat-index equation
    :nowrap:
 
+
 Where T is temperature in Fahrenheit and RH is relative humidity.
+
+Because this is a regression fit, the equation has an error of ±1.3°F.
 
 .. code-block:: cpp
    float h = (log10(BME280_HUMD)-2.0)/0.4343+(17.62*BME280_TEMP)/(243.12+BME280_TEMP);
@@ -220,3 +223,18 @@ Where T is temperature in Fahrenheit and RH is relative humidity.
    }
 
    BME280_HI = (5.0/9.0)*(BME280_HI_F - 32.0); // Convert back to Celsius
+
+ENS160
+^^^^^^
+
+The data collecting method for the ENS160 is very similar to the BME280. The parameters being collected are Air Quality Index (AQI) calculated from the German Federal Environmental Agency model, which is on a scale from 1 - 5, total volatile organic compounds (TVOC), and a calculated measurement of approximate Carbon-Dioxide concentration (eCO2).
+
+.. code-block:: cpp
+   ENS160.measure(true);
+   ENS160_AQI = ENS160.getAQI(); // Get air quality index
+   ENS160_TVOC = ENS160.getTVOC(); // Get total volatile organic compound concentration in parts per billion
+   ENS160_eCO2 = ENS160.geteCO2(); // Get eCO2 measurement, derived from TVOC
+
+Now the AQI can be calculated in accordance to the Environmental Protection Agency's NowCast algorithm.
+
+https://www.epa.gov/sites/default/files/2018-01/documents/nowcastfactsheet.pdf

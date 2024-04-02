@@ -162,13 +162,13 @@ void loop() {
   if(ENS160_STS && ENS160.available()){
     ENS160.measure(true);
     ENS160_AQI = ENS160.getAQI(); // Get air quality index
-    ENS160_TVOC = ENS160.getTVOC(); // Get total volitle organic compond concentration in parts per billion
-    ENS160_eCO2 = ENS160.geteCO2(); // Get eCO2 measurment, derived from TVOC
+    ENS160_TVOC = ENS160.getTVOC(); // Get total volatile organic compound concentration in parts per billion
+    ENS160_eCO2 = ENS160.geteCO2(); // Get eCO2 measurement, derived from TVOC
     
     //Calculate better AQI based off of the Environmental Protection Agency
-    float TVOC_CONSENTRATION = ENS160_TVOC*(29/24.45); // ug/m^3
+    float TVOC_CONCENTRATION = ENS160_TVOC*(29/24.45); // ug/m^3
     float alpha = 0.5; // Weight factor
-    ENS160_AQI = alpha*TVOC_CONSENTRATION + (1-alpha)*ENS160_AQI_PREV; // Calculated from NowCast EPA algorithm
+    ENS160_AQI = alpha*TVOC_CONCENTRATION + (1-alpha)*ENS160_AQI_PREV; // Calculated from NowCast EPA algorithm
     ENS160_AQI_PREV = ENS160_AQI;
   }
   else{
@@ -208,7 +208,7 @@ void loop() {
         SCD40_CO2 = static_cast<float>(SCD40_CO2_RAW); // Cast CO2 unsigned 16bit-integer to type float
       }
     }
-    else{ // If data is not ready, skip measurment
+    else{ // If data is not ready, skip measurement
     }
   }
   else{
