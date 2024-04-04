@@ -16,6 +16,9 @@
 Destination Weather Station v4.5 Assembly
 =========================================
 
+.. image:: ../assets/weatherstation-overview.png
+      :target: assembly.html
+
 The Destination Weather Station v4.5 is preassembled with the majority of the circuit components.
 
 Before using the weather station, you will need to :ref:`solder<soldering>` the :ref:`XIAO RP2040 microcontroller<xiao-RP2040>`, :ref:`OLED display<oled-display>`, and :ref:`power switch<switch>`. Follow the instructions below to solder your weather station. You can then :ref:`connect the batteries<batteries>` and insert the microSD card.
