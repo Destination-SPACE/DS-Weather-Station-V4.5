@@ -51,6 +51,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 #define BTN2 27
 #define BTN3 0
 #define BTN4 1
+#define CARD_DETECT 28
 #define FILE_BASE_NAME "Log_"
 #define RGB_R 17
 #define RGB_G 16
@@ -91,15 +92,52 @@ bool logging = false;
 int color_red = 0;
 int color_grn = 0;
 int color_blu = 0;
-int delayAmmount = 1000; //milliseconds
+int delayAmount = 1000; //milliseconds
 
 void setup() {
   Serial.begin(115200); // Set serial stream to 115200bits/s
   //while(!Serial); // Wait until serial monitor is open
 
+  //Initialize LEDs
+  pixels.begin();
+  pinMode(NEOPIXEL_PWR, OUTPUT);
+  digitalWrite(NEOPIXEL_PWR, HIGH);
+  pinMode(RGB_R, OUTPUT);
+  pinMode(RGB_G, OUTPUT);
+  pinMode(RGB_B, OUTPUT);
+
+  //Initialize OLED display
+  if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)){
+    Serial.print("\n\nOLED display not found");
+    while(true){
+      for(i=0,i<3,i++){
+        pixels.setPixelColor(0, pixels.Color(0, 0, 80));
+        pixels.show();
+        delay(100);
+        pixels.clear();
+        delay(100);
+      }
+      i = 0;
+      delay(500);
+    }
+  }
+  else{
+    display.setTextColor(WHITE);
+    display.setTextSize(1);
+    display.display();
+    display.clearDisplay();
+  }
+
   //Initialize BME280 sensor
   if(!BME280.begin(0x76, &Wire)){
     Serial.print("\n\nBME280 not found");
+    BME280_STS = 0;
+    display.clearDisplay();
+    display.setCursor(0,0);
+    display.print("BME280 not found");
+    display.display();
+    while(true){
+    }
   }
 
   //Initialize ENS160 sensor
@@ -150,30 +188,24 @@ void setup() {
     SCD40_STS = 0;
   }
 
-  //Initialize OLED display
-  if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)){
-    Serial.print("\n\nOLED display not found");
-  }
-  else{
-    display.setTextColor(WHITE);
-    display.setTextSize(1);
-    display.display();
-    display.clearDisplay();
-  }
-
-  //Initialize LEDs
-  pixels.begin();
-  pinMode(NEOPIXEL_PWR, OUTPUT);
-  digitalWrite(NEOPIXEL_PWR, HIGH);
-  pinMode(RGB_R, OUTPUT);
-  pinMode(RGB_G, OUTPUT);
-  pinMode(RGB_B, OUTPUT);
-
   //Initialize SD card
+  pinMode(CARD_DETECT, INPUT); // Define card detect
   const uint8_t BASE_NAME_SIZE = sizeof(FILE_BASE_NAME) - 1;
-  if(!SD.begin(SD_chipSelect, SD_SCK_MHZ(50))){
+
+  if(CARD_DETECT == LOW){
     display.setCursor(0,0);
     display.print("insert microSD card");
+    while(CARD_DETECT == LOW){
+      delay(500);
+    }
+  }
+  else{
+  }
+
+  if(!SD.begin(SD_chipSelect, SD_SCK_MHZ(50))){
+    display.setCursor(0,0);
+    display.print("microSD card failure");
+    display.setCursor(0,0);
     while(true){
       if(SD.begin(SD_chipSelect, SD_SCK_MHZ(50))){
         break;
@@ -201,7 +233,6 @@ void setup() {
     Serial.print("\n\nError opening file");
   }
   file.println(F("Time (s),Temp (C),Hum (%),HI (C),PRES (hPa),ALT (m),CO2 (ppm),TVOC (ppb),AQI (1-5),UVI (0-11),LUX (k-lux)"));
-
 
   //Print data table header
   Serial.print("\n\n+==============================================================================+\n|  TIME  | TEMP | HUM |  HI  | PRES | ALT | CO2 | TVOC |  AQI  |  UVI  |  LUX  |\n|hh:mm:ss| (°C) | (%) | (°C) | hPa  | (m) |(ppm)|(ppb.)| (1-5) |(0-+11)|(k-lux)|\n+==============================================================================+");
@@ -302,7 +333,7 @@ void loop() {
         SCD40_CO2 = static_cast<float>(SCD40_CO2_RAW); // Cast CO2 unsigned 16bit-integer to type float
       }
     }
-    else{ // If data is not ready, skip measurment
+    else{ // If data is not ready, skip measurement
     }
   }
   else{
@@ -466,7 +497,7 @@ void loop() {
   setColor(0, 0, 0);
   //Idle until it is time for next data read
   while(true){
-    if(millis() - delay_timer >= delayAmmount) break;
+    if(millis() - delay_timer >= delayAmount) break;
     delay(5);
   }
 }

@@ -87,10 +87,43 @@ void setup() {
   Serial.begin(115200); // Set serial stream to 115200bits/s
   //while(!Serial); // Wait until serial monitor is open
 
+  //Initialize LEDs
+  pixels.begin();
+  pinMode(NEOPIXEL_PWR, OUTPUT);
+  digitalWrite(NEOPIXEL_PWR, HIGH);
+
+  //Initialize OLED display
+  if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)){
+    Serial.print("\n\nOLED display not found");
+    while(true){
+      for(i=0,i<3,i++){
+        pixels.setPixelColor(0, pixels.Color(0, 0, 80));
+        pixels.show();
+        delay(100);
+        pixels.clear();
+        delay(100);
+      }
+      i = 0;
+      delay(500);
+    }
+  }
+  else{
+    display.setTextColor(WHITE);
+    display.setTextSize(1);
+    display.display();
+    display.clearDisplay();
+  }
+
   //Initialize BME280 sensor
   if(!BME280.begin(0x76, &Wire)){
     Serial.print("\n\nBME280 not found");
     BME280_STS = 0;
+    display.clearDisplay();
+    display.setCursor(0,0);
+    display.print("BME280 not found");
+    display.display();
+    while(true){
+    }
   }
 
   //Initialize ENS160 sensor
@@ -140,22 +173,6 @@ void setup() {
     Serial.print("\n\nSCD40 failed to respond");
     SCD40_STS = 0;
   }
-
-  //Initialize OLED display
-  if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)){
-    Serial.print("\n\nOLED display not found");
-  }
-  else{
-    display.setTextColor(WHITE);
-    display.setTextSize(1);
-    display.display();
-    display.clearDisplay();
-  }
-
-  //Initialize LEDs
-  pixels.begin();
-  pinMode(NEOPIXEL_PWR, OUTPUT);
-  digitalWrite(NEOPIXEL_PWR, HIGH);
 
   //Print data table header
   Serial.print("\n\n+==============================================================================+\n|  TIME  | TEMP | HUM |  HI  | PRES | ALT | CO2 | TVOC |  AQI  |  UVI  |  LUX  |\n|hh:mm:ss| (°C) | (%) | (°C) | hPa  | (m) |(ppm)|(ppb.)| (1-5) |(0-+11)|(k-lux)|\n+==============================================================================+");
