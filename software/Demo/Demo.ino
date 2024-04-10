@@ -96,7 +96,7 @@ void setup() {
   if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)){
     Serial.print("\n\nOLED display not found");
     while(true){
-      for(i=0,i<3,i++){
+      for(i=0;i<3;i++){
         pixels.setPixelColor(0, pixels.Color(0, 0, 80));
         pixels.show();
         delay(100);

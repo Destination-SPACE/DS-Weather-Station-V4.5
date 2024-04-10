@@ -110,7 +110,7 @@ void setup() {
   if(!display.begin(SSD1306_SWITCHCAPVCC, SCREEN_ADDRESS)){
     Serial.print("\n\nOLED display not found");
     while(true){
-      for(i=0,i<3,i++){
+      for(i=0;i<3;i++){
         pixels.setPixelColor(0, pixels.Color(0, 0, 80));
         pixels.show();
         delay(100);
@@ -131,7 +131,6 @@ void setup() {
   //Initialize BME280 sensor
   if(!BME280.begin(0x76, &Wire)){
     Serial.print("\n\nBME280 not found");
-    BME280_STS = 0;
     display.clearDisplay();
     display.setCursor(0,0);
     display.print("BME280 not found");
@@ -192,10 +191,11 @@ void setup() {
   pinMode(CARD_DETECT, INPUT); // Define card detect
   const uint8_t BASE_NAME_SIZE = sizeof(FILE_BASE_NAME) - 1;
 
-  if(CARD_DETECT == LOW){
+  if(digitalRead(CARD_DETECT) == LOW){
     display.setCursor(0,0);
     display.print("insert microSD card");
-    while(CARD_DETECT == LOW){
+    display.display();
+    while(digitalRead(CARD_DETECT) == LOW){
       delay(500);
     }
   }
@@ -205,7 +205,7 @@ void setup() {
   if(!SD.begin(SD_chipSelect, SD_SCK_MHZ(50))){
     display.setCursor(0,0);
     display.print("microSD card failure");
-    display.setCursor(0,0);
+    display.display();
     while(true){
       if(SD.begin(SD_chipSelect, SD_SCK_MHZ(50))){
         break;
@@ -292,8 +292,8 @@ void loop() {
   if(ENS160_STS && ENS160.available()){
     ENS160.measure(true);
     ENS160_AQI = ENS160.getAQI(); // Get air quality index
-    ENS160_TVOC = ENS160.getTVOC(); // Get total volitle organic compond concentration in parts per billion
-    ENS160_eCO2 = ENS160.geteCO2(); // Get eCO2 measurment, derived from TVOC
+    ENS160_TVOC = ENS160.getTVOC(); // Get total volatile organic compound concentration in parts per billion
+    ENS160_eCO2 = ENS160.geteCO2(); // Get eCO2 measurement, derived from TVOC
   }
   else{
     ENS160_AQI = 0;
